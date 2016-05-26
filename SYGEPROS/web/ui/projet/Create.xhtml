@@ -22,7 +22,7 @@
                     <h:outputLabel value="#{bundle.CreateProjetLabel_description}" for="description" />
                     <h:inputText id="description" value="#{projetController.selected.description}" title="#{bundle.CreateProjetTitle_description}" required="true" requiredMessage="#{bundle.CreateProjetRequiredMessage_description}"/>
                     <h:outputLabel value="#{bundle.CreateProjetLabel_typeprojet}" for="typeprojet" />
-                    <h:inputText id="typeprojet" value="#{projetController.selected.typeprojet}" title="#{bundle.CreateProjetTitle_typeprojet}" required="true" requiredMessage="#{bundle.CreateProjetRequiredMessage_typeprojet}"/>
+                    <h:selectOneMenu id="typeprojet" value="#{projetController.selected.typeprojet}" title="#{bundle.CreateProjetTitle_typeprojet}" required="true" requiredMessage="#{bundle.CreateProjetRequiredMessage_typeprojet}"/>
                     <h:outputLabel value="#{bundle.CreateProjetLabel_createdBy}" for="createdBy" />
                     <h:inputText id="createdBy" value="#{projetController.selected.createdBy}" title="#{bundle.CreateProjetTitle_createdBy}" />
                     <h:outputLabel value="#{bundle.CreateProjetLabel_created}" for="created" />

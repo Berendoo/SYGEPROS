@@ -163,7 +163,8 @@ public class Programme implements Serializable {
 
     @Override
     public String toString() {
-        return "ht.gouv.faes.entity.Programme[ idprogramme=" + idprogramme + " ]";
+        //return "ht.gouv.faes.entity.Programme[ idprogramme=" + idprogramme + " ]";
+        return nomprogramme;
     }
     
 }

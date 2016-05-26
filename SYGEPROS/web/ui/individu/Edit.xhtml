@@ -16,7 +16,7 @@
             <h:form>
                 <h:panelGrid columns="2">
                     <h:outputLabel value="#{bundle.EditIndividuLabel_idindividu}" for="idindividu" />
-                    <h:inputText id="idindividu" value="#{individuController.selected.idindividu}" title="#{bundle.EditIndividuTitle_idindividu}" />
+                    <h:inputText id="idindividu" value="#{individuController.selected.idindividu}" title="#{bundle.EditIndividuTitle_idindividu}" disabled="true" />
                     <h:outputLabel value="#{bundle.EditIndividuLabel_nom}" for="nom" />
                     <h:inputText id="nom" value="#{individuController.selected.nom}" title="#{bundle.EditIndividuTitle_nom}" required="true" requiredMessage="#{bundle.EditIndividuRequiredMessage_nom}"/>
                     <h:outputLabel value="#{bundle.EditIndividuLabel_prenom}" for="prenom" />
@@ -54,7 +54,7 @@
                         <f:selectItems value="#{personnereferenceController.itemsAvailableSelectOne}"/>
                     </h:selectOneMenu>
                     <h:outputLabel value="#{bundle.EditIndividuLabel_createdBy}" for="createdBy" />
-                    <h:selectOneMenu id="createdBy" value="#{individuController.selected.createdBy}" title="#{bundle.EditIndividuTitle_createdBy}" >
+                    <h:selectOneMenu id="createdBy" value="#{individuController.selected.createdBy}" title="#{bundle.EditIndividuTitle_createdBy}" disabled="true" >
                         <f:selectItems value="#{utilisateurController.itemsAvailableSelectOne}"/>
                     </h:selectOneMenu>
                 </h:panelGrid>

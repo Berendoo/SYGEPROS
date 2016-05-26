@@ -109,7 +109,8 @@ public class Departement implements Serializable {
 
     @Override
     public String toString() {
-        return "ht.gouv.faes.entity.Departement[ iddepartement=" + iddepartement + " ]";
+        //return "ht.gouv.faes.entity.Departement[ iddepartement=" + iddepartement + " ]";
+        return nomdepartement;
     }
     
 }

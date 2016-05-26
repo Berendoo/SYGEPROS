@@ -28,7 +28,7 @@
                         <f:convertDateTime pattern="MM/dd/yyyy" />
                     </h:outputText>
                     <h:outputText value="#{bundle.ViewProgrammeLabel_idinstitution}"/>
-                    <h:outputText value="#{programmeController.selected.idinstitution}" title="#{bundle.ViewProgrammeTitle_idinstitution}"/>
+                    <h:outputText value="#{programmeController.selected.idinstitution.nominstitution}" title="#{bundle.ViewProgrammeTitle_idinstitution}"/>
                 </h:panelGrid>
                 <br />
                 <h:commandLink action="#{programmeController.destroyAndView}" value="#{bundle.ViewProgrammeDestroyLink}"/>

@@ -16,7 +16,7 @@
             <h:form>
                 <h:panelGrid columns="2">
                     <h:outputLabel value="#{bundle.EditCommuneLabel_idcommune}" for="idcommune" />
-                    <h:inputText id="idcommune" value="#{communeController.selected.idcommune}" title="#{bundle.EditCommuneTitle_idcommune}" />
+                    <h:inputText id="idcommune" value="#{communeController.selected.idcommune}" title="#{bundle.EditCommuneTitle_idcommune}" disabled="true" />
                     <h:outputLabel value="#{bundle.EditCommuneLabel_nomcommune}" for="nomcommune" />
                     <h:inputText id="nomcommune" value="#{communeController.selected.nomcommune}" title="#{bundle.EditCommuneTitle_nomcommune}" required="true" requiredMessage="#{bundle.EditCommuneRequiredMessage_nomcommune}"/>
                     <h:outputLabel value="#{bundle.EditCommuneLabel_iddepartement}" for="iddepartement" />

@@ -245,7 +245,8 @@ public class Personnereference implements Serializable {
 
     @Override
     public String toString() {
-        return "ht.gouv.faes.entity.Personnereference[ idprf=" + idprf + " ]";
+        //return "ht.gouv.faes.entity.Personnereference[ idprf=" + idprf + " ]";
+        return nomprf +" "+ prenomprf ;
     }
     
 }

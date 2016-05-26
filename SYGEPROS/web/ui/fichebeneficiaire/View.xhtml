@@ -28,9 +28,9 @@
                     <h:outputText value="#{bundle.ViewFichebeneficiaireLabel_iddossierbeneficiaire}"/>
                     <h:outputText value="#{fichebeneficiaireController.selected.iddossierbeneficiaire}" title="#{bundle.ViewFichebeneficiaireTitle_iddossierbeneficiaire}"/>
                     <h:outputText value="#{bundle.ViewFichebeneficiaireLabel_idprojet}"/>
-                    <h:outputText value="#{fichebeneficiaireController.selected.idprojet}" title="#{bundle.ViewFichebeneficiaireTitle_idprojet}"/>
+                    <h:outputText value="#{fichebeneficiaireController.selected.idprojet.nomprojet}" title="#{bundle.ViewFichebeneficiaireTitle_idprojet}"/>
                     <h:outputText value="#{bundle.ViewFichebeneficiaireLabel_idtypebeneficiaire}"/>
-                    <h:outputText value="#{fichebeneficiaireController.selected.idtypebeneficiaire}" title="#{bundle.ViewFichebeneficiaireTitle_idtypebeneficiaire}"/>
+                    <h:outputText value="#{fichebeneficiaireController.selected.idtypebeneficiaire.nomtypebeneficiaire}" title="#{bundle.ViewFichebeneficiaireTitle_idtypebeneficiaire}"/>
                 </h:panelGrid>
                 <br />
                 <h:commandLink action="#{fichebeneficiaireController.destroyAndView}" value="#{bundle.ViewFichebeneficiaireDestroyLink}"/>

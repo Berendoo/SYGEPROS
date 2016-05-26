@@ -253,7 +253,8 @@ public class Utilisateur implements Serializable {
 
     @Override
     public String toString() {
-        return "ht.gouv.faes.entity.Utilisateur[ idutilisateur=" + idutilisateur + " ]";
+        //return "ht.gouv.faes.entity.Utilisateur[ idutilisateur=" + idutilisateur + " ]";
+        return username;
     }
     
 }

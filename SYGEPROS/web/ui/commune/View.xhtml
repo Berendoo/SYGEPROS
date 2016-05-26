@@ -20,7 +20,7 @@
                     <h:outputText value="#{bundle.ViewCommuneLabel_nomcommune}"/>
                     <h:outputText value="#{communeController.selected.nomcommune}" title="#{bundle.ViewCommuneTitle_nomcommune}"/>
                     <h:outputText value="#{bundle.ViewCommuneLabel_iddepartement}"/>
-                    <h:outputText value="#{communeController.selected.iddepartement}" title="#{bundle.ViewCommuneTitle_iddepartement}"/>
+                    <h:outputText value="#{communeController.selected.iddepartement.nomdepartement}" title="#{bundle.ViewCommuneTitle_iddepartement}"/>
                 </h:panelGrid>
                 <br />
                 <h:commandLink action="#{communeController.destroyAndView}" value="#{bundle.ViewCommuneDestroyLink}"/>

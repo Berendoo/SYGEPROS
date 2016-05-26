@@ -189,7 +189,9 @@ public class Projet implements Serializable {
 
     @Override
     public String toString() {
-        return "ht.gouv.faes.entity.Projet[ idprojet=" + idprojet + " ]";
+        //return "ht.gouv.faes.entity.Projet[ idprojet=" + idprojet + " ]";
+        return nomprojet;
     }
+    
     
 }

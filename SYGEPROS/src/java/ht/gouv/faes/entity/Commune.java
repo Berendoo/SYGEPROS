@@ -166,7 +166,8 @@ public class Commune implements Serializable {
 
     @Override
     public String toString() {
-        return "ht.gouv.faes.entity.Commune[ idcommune=" + idcommune + " ]";
+        //return "ht.gouv.faes.entity.Commune[ idcommune=" + idcommune + " ]";
+        return nomcommune;
     }
     
 }
