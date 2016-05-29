@@ -227,5 +227,6 @@ public class IndividuController implements Serializable {
         }
 
     }
+    
 
 }

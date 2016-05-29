@@ -3,8 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
-
+    <script src="../../resources/jquery/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="../../resources/jquery/jquery-ui.js" type="text/javascript"></script>
     <ui:composition template="/template.xhtml">
         <ui:define name="title">
             <h:outputText value="#{bundle.CreateIndividuTitle}"></h:outputText>
@@ -22,7 +24,7 @@
                     <h:outputLabel value="#{bundle.CreateIndividuLabel_prenom}" for="prenom" />
                     <h:inputText id="prenom" value="#{individuController.selected.prenom}" title="#{bundle.CreateIndividuTitle_prenom}" required="true" requiredMessage="#{bundle.CreateIndividuRequiredMessage_prenom}"/>
                     <h:outputLabel value="#{bundle.CreateIndividuLabel_datenaissance}" for="datenaissance" />
-                    <h:inputText id="datenaissance" value="#{individuController.selected.datenaissance}" title="#{bundle.CreateIndividuTitle_datenaissance}" required="true" requiredMessage="#{bundle.CreateIndividuRequiredMessage_datenaissance}">
+                    <h:inputText id="datenaissance" value="#{individuController.selected.datenaissance.date}" title="#{bundle.CreateIndividuTitle_datenaissance}" required="true" requiredMessage="#{bundle.CreateIndividuRequiredMessage_datenaissance}" a:placeholder="MM/dd/yyyy">
                         <f:convertDateTime pattern="MM/dd/yyyy" />
                     </h:inputText>
                     <h:outputLabel value="#{bundle.CreateIndividuLabel_cin}" for="cin" />
