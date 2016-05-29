@@ -16,7 +16,7 @@
             <h:form>
                 <h:panelGrid columns="2">
                     <h:outputLabel value="#{bundle.EditFinancerLabel_idfinancer}" for="idfinancer" />
-                    <h:inputText id="idfinancer" value="#{financerController.selected.idfinancer}" title="#{bundle.EditFinancerTitle_idfinancer}" />
+                    <h:inputText id="idfinancer" value="#{financerController.selected.idfinancer}" title="#{bundle.EditFinancerTitle_idfinancer}" disabled="true"/>
                     <h:outputLabel value="#{bundle.EditFinancerLabel_date}" for="date" />
                     <h:inputText id="date" value="#{financerController.selected.date}" title="#{bundle.EditFinancerTitle_date}" required="true" requiredMessage="#{bundle.EditFinancerRequiredMessage_date}">
                         <f:convertDateTime pattern="MM/dd/yyyy" />

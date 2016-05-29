@@ -16,7 +16,7 @@
             <h:form>
                 <h:panelGrid columns="2">
                     <h:outputLabel value="#{bundle.CreateProjetLabel_idprojet}" for="idprojet" />
-                    <h:inputText id="idprojet" value="#{projetController.selected.idprojet}" title="#{bundle.CreateProjetTitle_idprojet}" />
+                    <h:inputText id="idprojet" value="#{projetController.selected.idprojet}" title="#{bundle.CreateProjetTitle_idprojet}" disabled="true"/>
                     <h:outputLabel value="#{bundle.CreateProjetLabel_nomprojet}" for="nomprojet" />
                     <h:inputText id="nomprojet" value="#{projetController.selected.nomprojet}" title="#{bundle.CreateProjetTitle_nomprojet}" required="true" requiredMessage="#{bundle.CreateProjetRequiredMessage_nomprojet}"/>
                     <h:outputLabel value="#{bundle.CreateProjetLabel_description}" for="description" />

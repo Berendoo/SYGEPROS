@@ -16,7 +16,7 @@
             <h:form>
                 <h:panelGrid columns="2">
                     <h:outputLabel value="#{bundle.EditTypeorganistationLabel_idtypeorganisation}" for="idtypeorganisation" />
-                    <h:inputText id="idtypeorganisation" value="#{typeorganistationController.selected.idtypeorganisation}" title="#{bundle.EditTypeorganistationTitle_idtypeorganisation}" />
+                    <h:inputText id="idtypeorganisation" value="#{typeorganistationController.selected.idtypeorganisation}" title="#{bundle.EditTypeorganistationTitle_idtypeorganisation}" disabled="true"/>
                     <h:outputLabel value="#{bundle.EditTypeorganistationLabel_nomtype}" for="nomtype" />
                     <h:inputText id="nomtype" value="#{typeorganistationController.selected.nomtype}" title="#{bundle.EditTypeorganistationTitle_nomtype}" required="true" requiredMessage="#{bundle.EditTypeorganistationRequiredMessage_nomtype}"/>
                     <h:outputLabel value="#{bundle.EditTypeorganistationLabel_description}" for="description" />

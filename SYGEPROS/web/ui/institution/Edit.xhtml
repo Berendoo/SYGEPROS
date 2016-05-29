@@ -16,7 +16,7 @@
             <h:form>
                 <h:panelGrid columns="2">
                     <h:outputLabel value="#{bundle.EditInstitutionLabel_idinstitution}" for="idinstitution" />
-                    <h:inputText id="idinstitution" value="#{institutionController.selected.idinstitution}" title="#{bundle.EditInstitutionTitle_idinstitution}" />
+                    <h:inputText id="idinstitution" value="#{institutionController.selected.idinstitution}" title="#{bundle.EditInstitutionTitle_idinstitution}" disabled="true"/>
                     <h:outputLabel value="#{bundle.EditInstitutionLabel_nominstitution}" for="nominstitution" />
                     <h:inputText id="nominstitution" value="#{institutionController.selected.nominstitution}" title="#{bundle.EditInstitutionTitle_nominstitution}" required="true" requiredMessage="#{bundle.EditInstitutionRequiredMessage_nominstitution}"/>
                     <h:outputLabel value="#{bundle.EditInstitutionLabel_adresseinstitution}" for="adresseinstitution" />

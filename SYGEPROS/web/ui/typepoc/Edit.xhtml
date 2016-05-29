@@ -16,7 +16,7 @@
             <h:form>
                 <h:panelGrid columns="2">
                     <h:outputLabel value="#{bundle.EditTypepocLabel_idtypepoc}" for="idtypepoc" />
-                    <h:inputText id="idtypepoc" value="#{typepocController.selected.idtypepoc}" title="#{bundle.EditTypepocTitle_idtypepoc}" />
+                    <h:inputText id="idtypepoc" value="#{typepocController.selected.idtypepoc}" title="#{bundle.EditTypepocTitle_idtypepoc}" disabled="true"/>
                     <h:outputLabel value="#{bundle.EditTypepocLabel_fonction}" for="fonction" />
                     <h:inputText id="fonction" value="#{typepocController.selected.fonction}" title="#{bundle.EditTypepocTitle_fonction}" required="true" requiredMessage="#{bundle.EditTypepocRequiredMessage_fonction}"/>
                     <h:outputLabel value="#{bundle.EditTypepocLabel_description}" for="description" />

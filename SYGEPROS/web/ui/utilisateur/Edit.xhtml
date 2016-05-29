@@ -16,7 +16,7 @@
             <h:form>
                 <h:panelGrid columns="2">
                     <h:outputLabel value="#{bundle.EditUtilisateurLabel_idutilisateur}" for="idutilisateur" />
-                    <h:inputText id="idutilisateur" value="#{utilisateurController.selected.idutilisateur}" title="#{bundle.EditUtilisateurTitle_idutilisateur}" />
+                    <h:inputText id="idutilisateur" value="#{utilisateurController.selected.idutilisateur}" title="#{bundle.EditUtilisateurTitle_idutilisateur}" disabled="true"/>
                     <h:outputLabel value="#{bundle.EditUtilisateurLabel_nom}" for="nom" />
                     <h:inputText id="nom" value="#{utilisateurController.selected.nom}" title="#{bundle.EditUtilisateurTitle_nom}" required="true" requiredMessage="#{bundle.EditUtilisateurRequiredMessage_nom}"/>
                     <h:outputLabel value="#{bundle.EditUtilisateurLabel_prenom}" for="prenom" />

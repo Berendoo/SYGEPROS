@@ -57,6 +57,7 @@ public class Individu implements Serializable {
     @Basic(optional = true)
     //@NotNull
     @Column(name = "IDINDIVIDU")
+//    @OneToOne
     private Integer idindividu;
     @Basic(optional = false)
     @NotNull
@@ -300,7 +301,8 @@ public class Individu implements Serializable {
 
     @Override
     public String toString() {
-        return "ht.gouv.faes.entity.Individu[ idindividu=" + idindividu + " ]";
+        //return "ht.gouv.faes.entity.Individu[ idindividu=" + idindividu + " ]";
+        return nom +" "+prenom+" "+cin;
     }
     
 }

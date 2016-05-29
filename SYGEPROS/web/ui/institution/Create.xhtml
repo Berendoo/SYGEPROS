@@ -2,7 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
+      
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 
     <ui:composition template="/template.xhtml">
@@ -16,7 +18,7 @@
             <h:form>
                 <h:panelGrid columns="2">
                     <h:outputLabel value="#{bundle.CreateInstitutionLabel_idinstitution}" for="idinstitution" />
-                    <h:inputText id="idinstitution" value="#{institutionController.selected.idinstitution}" title="#{bundle.CreateInstitutionTitle_idinstitution}" />
+                    <h:inputText id="idinstitution" value="#{institutionController.selected.idinstitution}" title="#{bundle.CreateInstitutionTitle_idinstitution}" disabled="true"/>
                     <h:outputLabel value="#{bundle.CreateInstitutionLabel_nominstitution}" for="nominstitution" />
                     <h:inputText id="nominstitution" value="#{institutionController.selected.nominstitution}" title="#{bundle.CreateInstitutionTitle_nominstitution}" required="true" requiredMessage="#{bundle.CreateInstitutionRequiredMessage_nominstitution}"/>
                     <h:outputLabel value="#{bundle.CreateInstitutionLabel_adresseinstitution}" for="adresseinstitution" />
@@ -32,7 +34,7 @@
                     <h:outputLabel value="#{bundle.CreateInstitutionLabel_createdBy}" for="createdBy" />
                     <h:inputText id="createdBy" value="#{institutionController.selected.createdBy}" title="#{bundle.CreateInstitutionTitle_createdBy}" />
                     <h:outputLabel value="#{bundle.CreateInstitutionLabel_created}" for="created" />
-                    <h:inputText id="created" value="#{institutionController.selected.created}" title="#{bundle.CreateInstitutionTitle_created}" >
+                    <h:inputText id="created" value="#{institutionController.selected.created}" title="#{bundle.CreateInstitutionTitle_created}" a:placeholder="MM/dd/yyyy" >
                         <f:convertDateTime pattern="MM/dd/yyyy" />
                     </h:inputText>
                     <h:outputLabel value="#{bundle.CreateInstitutionLabel_idcommune}" for="idcommune" />

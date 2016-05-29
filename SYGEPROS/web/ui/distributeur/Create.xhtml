@@ -16,7 +16,7 @@
             <h:form>
                 <h:panelGrid columns="2">
                     <h:outputLabel value="#{bundle.CreateDistributeurLabel_iddistributeur}" for="iddistributeur" />
-                    <h:inputText id="iddistributeur" value="#{distributeurController.selected.iddistributeur}" title="#{bundle.CreateDistributeurTitle_iddistributeur}" />
+                    <h:inputText id="iddistributeur" value="#{distributeurController.selected.iddistributeur}" title="#{bundle.CreateDistributeurTitle_iddistributeur}" disabled="true"/>
                     <h:outputLabel value="#{bundle.CreateDistributeurLabel_nomdistributeur}" for="nomdistributeur" />
                     <h:inputText id="nomdistributeur" value="#{distributeurController.selected.nomdistributeur}" title="#{bundle.CreateDistributeurTitle_nomdistributeur}" required="true" requiredMessage="#{bundle.CreateDistributeurRequiredMessage_nomdistributeur}"/>
                     <h:outputLabel value="#{bundle.CreateDistributeurLabel_telephone}" for="telephone" />

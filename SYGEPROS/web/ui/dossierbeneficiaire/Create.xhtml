@@ -16,7 +16,7 @@
             <h:form>
                 <h:panelGrid columns="2">
                     <h:outputLabel value="#{bundle.CreateDossierbeneficiaireLabel_iddossierbeneficiaire}" for="iddossierbeneficiaire" />
-                    <h:inputText id="iddossierbeneficiaire" value="#{dossierbeneficiaireController.selected.iddossierbeneficiaire}" title="#{bundle.CreateDossierbeneficiaireTitle_iddossierbeneficiaire}" />
+                    <h:inputText id="iddossierbeneficiaire" value="#{dossierbeneficiaireController.selected.iddossierbeneficiaire}" title="#{bundle.CreateDossierbeneficiaireTitle_iddossierbeneficiaire}" disabled="true"/>
                     <h:outputLabel value="#{bundle.CreateDossierbeneficiaireLabel_idindividu}" for="idindividu" />
                     <h:inputText id="idindividu" value="#{dossierbeneficiaireController.selected.idindividu}" title="#{bundle.CreateDossierbeneficiaireTitle_idindividu}" required="true" requiredMessage="#{bundle.CreateDossierbeneficiaireRequiredMessage_idindividu}"/>
                     <h:outputLabel value="#{bundle.CreateDossierbeneficiaireLabel_description}" for="description" />

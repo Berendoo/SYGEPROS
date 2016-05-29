@@ -24,7 +24,7 @@
                     <h:outputLabel value="#{bundle.CreateIndividuLabel_prenom}" for="prenom" />
                     <h:inputText id="prenom" value="#{individuController.selected.prenom}" title="#{bundle.CreateIndividuTitle_prenom}" required="true" requiredMessage="#{bundle.CreateIndividuRequiredMessage_prenom}"/>
                     <h:outputLabel value="#{bundle.CreateIndividuLabel_datenaissance}" for="datenaissance" />
-                    <h:inputText id="datenaissance" value="#{individuController.selected.datenaissance.date}" title="#{bundle.CreateIndividuTitle_datenaissance}" required="true" requiredMessage="#{bundle.CreateIndividuRequiredMessage_datenaissance}" a:placeholder="MM/dd/yyyy">
+                    <h:inputText id="datenaissance" value="#{individuController.selected.datenaissance}" title="#{bundle.CreateIndividuTitle_datenaissance}" required="true" requiredMessage="#{bundle.CreateIndividuRequiredMessage_datenaissance}" a:placeholder="MM/dd/yyyy">
                         <f:convertDateTime pattern="MM/dd/yyyy" />
                     </h:inputText>
                     <h:outputLabel value="#{bundle.CreateIndividuLabel_cin}" for="cin" />
@@ -42,7 +42,7 @@
                     <h:outputLabel value="#{bundle.CreateIndividuLabel_adresse}" for="adresse" />
                     <h:inputText id="adresse" value="#{individuController.selected.adresse}" title="#{bundle.CreateIndividuTitle_adresse}" required="true" requiredMessage="#{bundle.CreateIndividuRequiredMessage_adresse}"/>
                     <h:outputLabel value="#{bundle.CreateIndividuLabel_dateenregistrement}" for="dateenregistrement" />
-                    <h:inputText id="dateenregistrement" value="#{individuController.selected.dateenregistrement}" title="#{bundle.CreateIndividuTitle_dateenregistrement}" >
+                    <h:inputText id="dateenregistrement" value="#{individuController.selected.dateenregistrement}" title="#{bundle.CreateIndividuTitle_dateenregistrement}" a:placeholder="MM/dd/yyyy">
                         <f:convertDateTime pattern="MM/dd/yyyy" />
                     </h:inputText>
                     <h:outputLabel value="#{bundle.CreateIndividuLabel_niveau}" for="niveau" />
@@ -67,6 +67,8 @@
                 <h:commandLink action="#{individuController.prepareList}" value="#{bundle.CreateIndividuShowAllLink}" immediate="true"/>
                 <br />
                 <br />
+                <a href="http://localhost:8080/SYGEPROS/faces/ui/dossierbeneficiaire/Create.xhtml?id" target="_parent">>>Creer un dossier pour ce beneficiaire</a>
+                <br/>
                 <h:link outcome="/index" value="#{bundle.CreateIndividuIndexLink}"/>
             </h:form>
         </ui:define>

@@ -16,7 +16,7 @@
             <h:form>
                 <h:panelGrid columns="2">
                     <h:outputLabel value="#{bundle.CreateFichebeneficiaireLabel_idfiche}" for="idfiche" />
-                    <h:inputText id="idfiche" value="#{fichebeneficiaireController.selected.idfiche}" title="#{bundle.CreateFichebeneficiaireTitle_idfiche}" />
+                    <h:inputText id="idfiche" value="#{fichebeneficiaireController.selected.idfiche}" title="#{bundle.CreateFichebeneficiaireTitle_idfiche}" disabled="true"/>
                     <h:outputLabel value="#{bundle.CreateFichebeneficiaireLabel_datecreation}" for="datecreation" />
                     <h:inputText id="datecreation" value="#{fichebeneficiaireController.selected.datecreation}" title="#{bundle.CreateFichebeneficiaireTitle_datecreation}" required="true" requiredMessage="#{bundle.CreateFichebeneficiaireRequiredMessage_datecreation}">
                         <f:convertDateTime pattern="MM/dd/yyyy" />

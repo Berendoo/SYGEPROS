@@ -51,6 +51,7 @@ public class Dossierbeneficiaire implements Serializable {
     @Basic(optional = false)
     @NotNull
     @Column(name = "IDINDIVIDU")
+//    @OneToOne
     private int idindividu;
     @Basic(optional = false)
     @NotNull

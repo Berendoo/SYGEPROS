@@ -16,7 +16,7 @@
             <h:form>
                 <h:panelGrid columns="2">
                     <h:outputLabel value="#{bundle.CreatePrestationLabel_idprestation}" for="idprestation" />
-                    <h:inputText id="idprestation" value="#{prestationController.selected.idprestation}" title="#{bundle.CreatePrestationTitle_idprestation}" />
+                    <h:inputText id="idprestation" value="#{prestationController.selected.idprestation}" title="#{bundle.CreatePrestationTitle_idprestation}" disabled="true"/>
                     <h:outputLabel value="#{bundle.CreatePrestationLabel_nomprestation}" for="nomprestation" />
                     <h:inputText id="nomprestation" value="#{prestationController.selected.nomprestation}" title="#{bundle.CreatePrestationTitle_nomprestation}" required="true" requiredMessage="#{bundle.CreatePrestationRequiredMessage_nomprestation}"/>
                     <h:outputLabel value="#{bundle.CreatePrestationLabel_description}" for="description" />

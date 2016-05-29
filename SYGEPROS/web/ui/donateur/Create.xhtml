@@ -16,7 +16,7 @@
             <h:form>
                 <h:panelGrid columns="2">
                     <h:outputLabel value="#{bundle.CreateDonateurLabel_iddonateur}" for="iddonateur" />
-                    <h:inputText id="iddonateur" value="#{donateurController.selected.iddonateur}" title="#{bundle.CreateDonateurTitle_iddonateur}" />
+                    <h:inputText id="iddonateur" value="#{donateurController.selected.iddonateur}" title="#{bundle.CreateDonateurTitle_iddonateur}" disabled="true" />
                     <h:outputLabel value="#{bundle.CreateDonateurLabel_nomdonateur}" for="nomdonateur" />
                     <h:inputText id="nomdonateur" value="#{donateurController.selected.nomdonateur}" title="#{bundle.CreateDonateurTitle_nomdonateur}" required="true" requiredMessage="#{bundle.CreateDonateurRequiredMessage_nomdonateur}"/>
                     <h:outputLabel value="#{bundle.CreateDonateurLabel_adresse}" for="adresse" />

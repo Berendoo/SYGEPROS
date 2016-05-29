@@ -16,7 +16,7 @@
             <h:form>
                 <h:panelGrid columns="2">
                     <h:outputLabel value="#{bundle.EditTypebeneficiaireLabel_idtypebeneficiaire}" for="idtypebeneficiaire" />
-                    <h:inputText id="idtypebeneficiaire" value="#{typebeneficiaireController.selected.idtypebeneficiaire}" title="#{bundle.EditTypebeneficiaireTitle_idtypebeneficiaire}" />
+                    <h:inputText id="idtypebeneficiaire" value="#{typebeneficiaireController.selected.idtypebeneficiaire}" title="#{bundle.EditTypebeneficiaireTitle_idtypebeneficiaire}" disabled="true"/>
                     <h:outputLabel value="#{bundle.EditTypebeneficiaireLabel_nomtypebeneficiaire}" for="nomtypebeneficiaire" />
                     <h:inputText id="nomtypebeneficiaire" value="#{typebeneficiaireController.selected.nomtypebeneficiaire}" title="#{bundle.EditTypebeneficiaireTitle_nomtypebeneficiaire}" required="true" requiredMessage="#{bundle.EditTypebeneficiaireRequiredMessage_nomtypebeneficiaire}"/>
                     <h:outputLabel value="#{bundle.EditTypebeneficiaireLabel_description}" for="description" />

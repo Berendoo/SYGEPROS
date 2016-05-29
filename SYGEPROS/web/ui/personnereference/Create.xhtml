@@ -16,7 +16,7 @@
             <h:form>
                 <h:panelGrid columns="2">
                     <h:outputLabel value="#{bundle.CreatePersonnereferenceLabel_idprf}" for="idprf" />
-                    <h:inputText id="idprf" value="#{personnereferenceController.selected.idprf}" title="#{bundle.CreatePersonnereferenceTitle_idprf}" />
+                    <h:inputText id="idprf" value="#{personnereferenceController.selected.idprf}" title="#{bundle.CreatePersonnereferenceTitle_idprf}" disabled="true"/>
                     <h:outputLabel value="#{bundle.CreatePersonnereferenceLabel_nomprf}" for="nomprf" />
                     <h:inputText id="nomprf" value="#{personnereferenceController.selected.nomprf}" title="#{bundle.CreatePersonnereferenceTitle_nomprf}" required="true" requiredMessage="#{bundle.CreatePersonnereferenceRequiredMessage_nomprf}"/>
                     <h:outputLabel value="#{bundle.CreatePersonnereferenceLabel_prenomprf}" for="prenomprf" />

@@ -16,7 +16,7 @@
             <h:form>
                 <h:panelGrid columns="2">
                     <h:outputLabel value="#{bundle.EditProgrammeLabel_idprogramme}" for="idprogramme" />
-                    <h:inputText id="idprogramme" value="#{programmeController.selected.idprogramme}" title="#{bundle.EditProgrammeTitle_idprogramme}" />
+                    <h:inputText id="idprogramme" value="#{programmeController.selected.idprogramme}" title="#{bundle.EditProgrammeTitle_idprogramme}" disabled="true"/>
                     <h:outputLabel value="#{bundle.EditProgrammeLabel_nomprogramme}" for="nomprogramme" />
                     <h:inputText id="nomprogramme" value="#{programmeController.selected.nomprogramme}" title="#{bundle.EditProgrammeTitle_nomprogramme}" required="true" requiredMessage="#{bundle.EditProgrammeRequiredMessage_nomprogramme}"/>
                     <h:outputLabel value="#{bundle.EditProgrammeLabel_description}" for="description" />

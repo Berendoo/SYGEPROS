@@ -16,7 +16,7 @@
             <h:form>
                 <h:panelGrid columns="2">
                     <h:outputLabel value="#{bundle.CreateContratLabel_idcontrat}" for="idcontrat" />
-                    <h:inputText id="idcontrat" value="#{contratController.selected.idcontrat}" title="#{bundle.CreateContratTitle_idcontrat}" />
+                    <h:inputText id="idcontrat" value="#{contratController.selected.idcontrat}" title="#{bundle.CreateContratTitle_idcontrat}" disabled="true" />
                     <h:outputLabel value="#{bundle.CreateContratLabel_datedebut}" for="datedebut" />
                     <h:inputText id="datedebut" value="#{contratController.selected.datedebut}" title="#{bundle.CreateContratTitle_datedebut}" required="true" requiredMessage="#{bundle.CreateContratRequiredMessage_datedebut}">
                         <f:convertDateTime pattern="MM/dd/yyyy" />

@@ -16,7 +16,7 @@
             <h:form>
                 <h:panelGrid columns="2">
                     <h:outputLabel value="#{bundle.EditEnfantLabel_idenfant}" for="idenfant" />
-                    <h:inputText id="idenfant" value="#{enfantController.selected.idenfant}" title="#{bundle.EditEnfantTitle_idenfant}" />
+                    <h:inputText id="idenfant" value="#{enfantController.selected.idenfant}" title="#{bundle.EditEnfantTitle_idenfant}" disabled="true"/>
                     <h:outputLabel value="#{bundle.EditEnfantLabel_nomenfant}" for="nomenfant" />
                     <h:inputText id="nomenfant" value="#{enfantController.selected.nomenfant}" title="#{bundle.EditEnfantTitle_nomenfant}" required="true" requiredMessage="#{bundle.EditEnfantRequiredMessage_nomenfant}"/>
                     <h:outputLabel value="#{bundle.EditEnfantLabel_prenomenfant}" for="prenomenfant" />

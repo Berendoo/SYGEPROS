@@ -3,6 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
+       xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 
     <ui:composition template="/template.xhtml">
@@ -16,11 +17,11 @@
             <h:form>
                 <h:panelGrid columns="2">
                     <h:outputLabel value="#{bundle.CreateLivraisonLabel_idlivraison}" for="idlivraison" />
-                    <h:inputText id="idlivraison" value="#{livraisonController.selected.idlivraison}" title="#{bundle.CreateLivraisonTitle_idlivraison}" />
+                    <h:inputText id="idlivraison" value="#{livraisonController.selected.idlivraison}" title="#{bundle.CreateLivraisonTitle_idlivraison}" disabled="true"/>
                     <h:outputLabel value="#{bundle.CreateLivraisonLabel_quantite}" for="quantite" />
                     <h:inputText id="quantite" value="#{livraisonController.selected.quantite}" title="#{bundle.CreateLivraisonTitle_quantite}" />
                     <h:outputLabel value="#{bundle.CreateLivraisonLabel_datelivraison}" for="datelivraison" />
-                    <h:inputText id="datelivraison" value="#{livraisonController.selected.datelivraison}" title="#{bundle.CreateLivraisonTitle_datelivraison}" >
+                    <h:inputText id="datelivraison" value="#{livraisonController.selected.datelivraison}" title="#{bundle.CreateLivraisonTitle_datelivraison}" a:placeholder="MM/dd/yyyy" >
                         <f:convertDateTime pattern="MM/dd/yyyy" />
                     </h:inputText>
                     <h:outputLabel value="#{bundle.CreateLivraisonLabel_nofacture}" for="nofacture" />
@@ -28,7 +29,7 @@
                     <h:outputLabel value="#{bundle.CreateLivraisonLabel_cin}" for="cin" />
                     <h:inputText id="cin" value="#{livraisonController.selected.cin}" title="#{bundle.CreateLivraisonTitle_cin}" />
                     <h:outputLabel value="#{bundle.CreateLivraisonLabel_datelancement}" for="datelancement" />
-                    <h:inputText id="datelancement" value="#{livraisonController.selected.datelancement}" title="#{bundle.CreateLivraisonTitle_datelancement}" >
+                    <h:inputText id="datelancement" value="#{livraisonController.selected.datelancement}" title="#{bundle.CreateLivraisonTitle_datelancement}" a:placeholder="MM/dd/yyyy">
                         <f:convertDateTime pattern="MM/dd/yyyy" />
                     </h:inputText>
                     <h:outputLabel value="#{bundle.CreateLivraisonLabel_pin}" for="pin" />
