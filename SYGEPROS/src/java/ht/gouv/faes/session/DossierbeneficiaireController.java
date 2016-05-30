@@ -78,7 +78,12 @@ public class DossierbeneficiaireController implements Serializable {
         selectedItemIndex = -1;
         return "Create";
     }
-
+    public String prepareCreateDossier(Integer idDoc) {
+        current = new Dossierbeneficiaire();
+        current.setIddossierbeneficiaire(idDoc);
+        selectedItemIndex = -1;
+        return "../Individu/Create";
+    }
     public String create() {
         try {
             getFacade().create(current);

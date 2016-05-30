@@ -114,30 +114,30 @@
                             </f:facet>
                             <h:outputText value="#{item.idprf}"/>
                         </h:column>
-                        <h:column>
+<!--                        <h:column>
                             <f:facet name="header">
                                 <h:outputText value="#{bundle.ListIndividuTitle_createdBy}"/>
                             </f:facet>
                             <h:outputText value="#{item.createdBy}"/>
-                        </h:column>
+                        </h:column>-->
                         <h:column>
                             <f:facet name="header">
                                 <h:outputText value="&nbsp;"/>
                             </f:facet>
                             <h:commandLink action="#{individuController.prepareView}" value="#{bundle.ListIndividuViewLink}"/>
-                            <h:outputText value=" "/>
+                            <h:outputText value=" "/>|
                             <h:commandLink action="#{individuController.prepareEdit}" value="#{bundle.ListIndividuEditLink}"/>
-                            <h:outputText value=" "/>
-                            <h:commandLink action="#{individuController.destroy}" value="#{bundle.ListIndividuDestroyLink}"/>
+                            <h:outputText value=" "/>|
+                            <h:commandLink action="#{individuController.destroy}" value="#{bundle.ListIndividuDestroyLink}"/>|
+                            <h:commandLink action="#{dossierbeneficiaireController.prepareCreateDossier(item.idindividu)}" value="Creer dossier"/>
+                            
+                             
                         </h:column>
                     </h:dataTable>
                 </h:panelGroup>
                 <br />
                 <h:commandLink action="#{individuController.prepareCreate}" value="#{bundle.ListIndividuCreateLink}"/>
-                <br />
-                <br />
-               
-                <br/>
+                |
                 <h:link outcome="/index" value="#{bundle.ListIndividuIndexLink}"/>
                
             </h:form>

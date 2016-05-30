@@ -54,18 +54,18 @@
                     <h:selectOneMenu id="idprf" value="#{individuController.selected.idprf}" title="#{bundle.CreateIndividuTitle_idprf}" >
                         <f:selectItems value="#{personnereferenceController.itemsAvailableSelectOne}"/>
                     </h:selectOneMenu>
-                    <h:outputLabel value="#{bundle.CreateIndividuLabel_createdBy}" for="createdBy" />
+<!--                    <h:outputLabel value="#{bundle.CreateIndividuLabel_createdBy}" for="createdBy" />
                     <h:selectOneMenu id="createdBy" value="#{individuController.selected.createdBy}" title="#{bundle.CreateIndividuTitle_createdBy}" >
                         <f:selectItems value="#{utilisateurController.itemsAvailableSelectOne}"/>
-                    </h:selectOneMenu>
+                    </h:selectOneMenu>-->
                 </h:panelGrid>
                 <br />
                 <h:commandLink action="#{individuController.create}" value="#{bundle.CreateIndividuSaveLink}" />
-                <br />
-                <br />
+                 |
                 <h:commandLink action="#{individuController.prepareList}" value="#{bundle.CreateIndividuShowAllLink}" immediate="true"/>
-                <br />
-                <br />                
+                |
+               
+                         
                 <h:link outcome="/index" value="#{bundle.CreateIndividuIndexLink}"/>
             </h:form>
         </ui:define>
