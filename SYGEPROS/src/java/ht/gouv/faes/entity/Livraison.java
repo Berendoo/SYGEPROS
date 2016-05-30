@@ -81,7 +81,7 @@ public class Livraison implements Serializable {
     @Column(name = "MONTANT")
     private BigDecimal montant;
     @Column(name = "DEVISE")
-    private BigDecimal devise;
+    private String devise;
     @Size(max = 15)
     @Column(name = "PY_PAYER_ID")
     private String pyPayerId;
@@ -192,11 +192,11 @@ public class Livraison implements Serializable {
         this.montant = montant;
     }
 
-    public BigDecimal getDevise() {
+    public String getDevise() {
         return devise;
     }
 
-    public void setDevise(BigDecimal devise) {
+    public void setDevise(String devise) {
         this.devise = devise;
     }
 

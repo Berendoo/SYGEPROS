@@ -5,8 +5,7 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
-    <script src="../../resources/jquery/jquery-1.10.2.js" type="text/javascript"></script>
-    <script src="../../resources/jquery/jquery-ui.js" type="text/javascript"></script>
+    
     <ui:composition template="/template.xhtml">
         <ui:define name="title">
             <h:outputText value="#{bundle.CreateIndividuTitle}"></h:outputText>
@@ -30,7 +29,7 @@
                     <h:outputLabel value="#{bundle.CreateIndividuLabel_cin}" for="cin" />
                     <h:inputText id="cin" value="#{individuController.selected.cin}" title="#{bundle.CreateIndividuTitle_cin}" required="true" requiredMessage="#{bundle.CreateIndividuRequiredMessage_cin}"/>
                     <h:outputLabel value="#{bundle.CreateIndividuLabel_telephone}" for="telephone" />
-                    <h:inputText id="telephone" value="#{individuController.selected.telephone}" title="#{bundle.CreateIndividuTitle_telephone}" required="true" requiredMessage="#{bundle.CreateIndividuRequiredMessage_telephone}"/>
+                    <h:inputText id="telephone" value="#{individuController.selected.telephone}" title="#{bundle.CreateIndividuTitle_telephone}" required="true" requiredMessage="#{bundle.CreateIndividuRequiredMessage_telephone}" />
                     <h:outputLabel value="#{bundle.CreateIndividuLabel_telephone2}" for="telephone2" />
                     <h:inputText id="telephone2" value="#{individuController.selected.telephone2}" title="#{bundle.CreateIndividuTitle_telephone2}" />
                     <h:outputLabel value="#{bundle.CreateIndividuLabel_sexe}" for="sexe" />
@@ -66,9 +65,7 @@
                 <br />
                 <h:commandLink action="#{individuController.prepareList}" value="#{bundle.CreateIndividuShowAllLink}" immediate="true"/>
                 <br />
-                <br />
-                <a href="http://localhost:8080/SYGEPROS/faces/ui/dossierbeneficiaire/Create.xhtml?id" target="_parent">>>Creer un dossier pour ce beneficiaire</a>
-                <br/>
+                <br />                
                 <h:link outcome="/index" value="#{bundle.CreateIndividuIndexLink}"/>
             </h:form>
         </ui:define>

@@ -14,7 +14,7 @@
                 <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
             </h:panelGroup>
             <h:form>
-                <h:panelGrid columns="2">
+                <h:panelGrid columns="2"  border="1">
                     <h:outputText value="#{bundle.ViewIndividuLabel_idindividu}"/>
                     <h:outputText value="#{individuController.selected.idindividu}" title="#{bundle.ViewIndividuTitle_idindividu}"/>
                     <h:outputText value="#{bundle.ViewIndividuLabel_nom}"/>
@@ -63,7 +63,7 @@
                 <h:commandLink action="#{individuController.prepareList}" value="#{bundle.ViewIndividuShowAllLink}"/>
                 <br />
                 <br />
-                <a href="http://localhost:8080/SYGEPROS/faces/ui/dossierbeneficiaire/Create.xhtml?idindividu" target="_parent">>>Creer un dossier pour ce beneficiaire</a>
+              
                 <br/>
                 <h:link outcome="/index" value="#{bundle.ViewIndividuIndexLink}"/>
 
