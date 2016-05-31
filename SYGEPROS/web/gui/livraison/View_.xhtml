@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <body>
+
+        <ui:composition template="./../../template/templatepage.xhtml">
+
+            <ui:define name="title">
+              <h:outputText value="#{bundle.ViewLivraisonTitle}"></h:outputText>
+            </ui:define>
+
+            <ui:define name="content">
+           <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2" border="1">
+                    <h:outputText value="#{bundle.ViewLivraisonLabel_idlivraison}"/>
+                    <h:outputText value="#{livraisonController.selected.idlivraison}" title="#{bundle.ViewLivraisonTitle_idlivraison}"/>
+                    <h:outputText value="#{bundle.ViewLivraisonLabel_quantite}"/>
+                    <h:outputText value="#{livraisonController.selected.quantite}" title="#{bundle.ViewLivraisonTitle_quantite}"/>
+                    <h:outputText value="#{bundle.ViewLivraisonLabel_datelivraison}"/>
+                    <h:outputText value="#{livraisonController.selected.datelivraison}" title="#{bundle.ViewLivraisonTitle_datelivraison}">
+                        <f:convertDateTime pattern="MM/dd/yyyy" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewLivraisonLabel_nofacture}"/>
+                    <h:outputText value="#{livraisonController.selected.nofacture}" title="#{bundle.ViewLivraisonTitle_nofacture}"/>
+                    <h:outputText value="#{bundle.ViewLivraisonLabel_cin}"/>
+                    <h:outputText value="#{livraisonController.selected.cin}" title="#{bundle.ViewLivraisonTitle_cin}"/>
+                    <h:outputText value="#{bundle.ViewLivraisonLabel_datelancement}"/>
+                    <h:outputText value="#{livraisonController.selected.datelancement}" title="#{bundle.ViewLivraisonTitle_datelancement}">
+                        <f:convertDateTime pattern="MM/dd/yyyy" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewLivraisonLabel_pin}"/>
+                    <h:outputText value="#{livraisonController.selected.pin}" title="#{bundle.ViewLivraisonTitle_pin}"/>
+                    <h:outputText value="#{bundle.ViewLivraisonLabel_periode}"/>
+                    <h:outputText value="#{livraisonController.selected.periode}" title="#{bundle.ViewLivraisonTitle_periode}"/>
+                    <h:outputText value="#{bundle.ViewLivraisonLabel_montant}"/>
+                    <h:outputText value="#{livraisonController.selected.montant}" title="#{bundle.ViewLivraisonTitle_montant}"/>
+                    <h:outputText value="#{bundle.ViewLivraisonLabel_devise}"/>
+                    <h:outputText value="#{livraisonController.selected.devise}" title="#{bundle.ViewLivraisonTitle_devise}"/>
+                    <h:outputText value="#{bundle.ViewLivraisonLabel_pyPayerId}"/>
+                    <h:outputText value="#{livraisonController.selected.pyPayerId}" title="#{bundle.ViewLivraisonTitle_pyPayerId}"/>
+                    <h:outputText value="#{bundle.ViewLivraisonLabel_pyPayrollNo}"/>
+                    <h:outputText value="#{livraisonController.selected.pyPayrollNo}" title="#{bundle.ViewLivraisonTitle_pyPayrollNo}"/>
+                    <h:outputText value="#{bundle.ViewLivraisonLabel_pyPayeeId}"/>
+                    <h:outputText value="#{livraisonController.selected.pyPayeeId}" title="#{bundle.ViewLivraisonTitle_pyPayeeId}"/>
+                    <h:outputText value="#{bundle.ViewLivraisonLabel_dossier}"/>
+                    <h:outputText value="#{livraisonController.selected.dossier}" title="#{bundle.ViewLivraisonTitle_dossier}"/>
+                    <h:outputText value="#{bundle.ViewLivraisonLabel_numeroch}"/>
+                    <h:outputText value="#{livraisonController.selected.numeroch}" title="#{bundle.ViewLivraisonTitle_numeroch}"/>
+                    <h:outputText value="#{bundle.ViewLivraisonLabel_serie}"/>
+                    <h:outputText value="#{livraisonController.selected.serie}" title="#{bundle.ViewLivraisonTitle_serie}"/>
+                    <h:outputText value="#{bundle.ViewLivraisonLabel_idcommune}"/>
+                    <h:outputText value="#{livraisonController.selected.idcommune}" title="#{bundle.ViewLivraisonTitle_idcommune}"/>
+                    <h:outputText value="#{bundle.ViewLivraisonLabel_iddidtributeur}"/>
+                    <h:outputText value="#{livraisonController.selected.iddidtributeur}" title="#{bundle.ViewLivraisonTitle_iddidtributeur}"/>
+                    <h:outputText value="#{bundle.ViewLivraisonLabel_idfiche}"/>
+                    <h:outputText value="#{livraisonController.selected.idfiche}" title="#{bundle.ViewLivraisonTitle_idfiche}"/>
+                    <h:outputText value="#{bundle.ViewLivraisonLabel_idprestation}"/>
+                    <h:outputText value="#{livraisonController.selected.idprestation}" title="#{bundle.ViewLivraisonTitle_idprestation}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{livraisonController.destroyAndView}" value="#{bundle.ViewLivraisonDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewLivraisonEditLink}"/>
+                <br />
+                <h:commandLink action="#{livraisonController.prepareCreate}" value="#{bundle.ViewLivraisonCreateLink}" />
+                <br />
+                <h:commandLink action="#{livraisonController.prepareList}" value="#{bundle.ViewLivraisonShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewLivraisonIndexLink}"/>
+
+            </h:form>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>
