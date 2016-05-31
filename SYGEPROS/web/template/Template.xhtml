@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <script src="../resources/jquery/jquery.min.js" type="text/javascript"></script>
+        <script src="../resources/js/bootstrap.min.js" type="text/javascript"></script>
+        <h:outputStylesheet library="css" name="bootstrap.min.css"/>
+        <title>SYGEPROS</title>
+    </h:head>
+
+    <h:body>
+
+        <div>
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>                        
+                        </button>
+                        <a class="navbar-brand" href="#">SYGEPROS</a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav">
+
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Bénéficiaire <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><h:link outcome="/ui/individu/Create.xhtml" value="Ajouter un candidat"/></li>
+                                    <li><h:link outcome="/ui/dossierbeneficiaire/Create.xhtml" value="Créer Un dossier Bénéficiaire"/></li>
+                                    <li><h:link outcome="/ui/fichebeneficiaire/Create.xhtml" value="Creer Fiche Beneficiaire"/></li>                                   
+                                    <li><h:link outcome="/ui/individu/Create.xhtml" value="Rechercher un Bénéficiaire"/></li> 
+
+                                </ul>
+                            </li>
+
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Projet <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><h:link outcome="/ui/programme/Create.xhtml" value="Céeer un Programme"/></li>
+                                    <li><h:link outcome="/ui/projet/Create.xhtml" value="Créer un Projet"/></li>
+                                    <li><h:link outcome="/ui/donateur/Create.xhtml" value="Ajouter un Donateur"/></li>
+                                    <li><h:link outcome="/ui/distributeur/Create.xhtml" value="Ajouter un Distributeur"/></li>
+                                    <li><h:link outcome="/ui/institution/Create.xhtml" value="Ajouter une Institution"/></li>
+                                    <li><h:link outcome="/ui/contrat/Create.xhtml" value="Ajouter un Contrat"/></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Point de Contact <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><h:link outcome="/ui/organisation/Create.xhtml" value="Ajouter une organisation"/></li>
+                                    <li><h:link outcome="/ui/personnereference/Create.xhtml" value="Creer un POC"/></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Livraison <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><h:link outcome="/ui/livraison/Create.xhtml" value="Ajouter une Livraison"/></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Rapport<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                  <li><h:link outcome="/ui/personnereference/Create.xhtml" value="Afficher les Rapport"/></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Administration<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                  <li><h:link outcome="/ui/utilisateur/Create.xhtml" value="Ajouter un utilisateur"/></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#"><span class="glyphicon glyphicon-user"></span> user</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        
+        <div id="title" class="title">
+            <ui:insert name="title">
+
+            </ui:insert>
+        </div>
+        <div id="content" class="center_content">
+            <ui:insert name="content">
+
+            </ui:insert>
+        </div>
+
+        <div id="bottom">
+            <br/>
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+            <ui:insert name="bottom">@MBDS HAITI | Juin 2016</ui:insert>
+        </div>
+
+    </h:body>
+
+</html>

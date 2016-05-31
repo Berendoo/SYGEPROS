@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <h:head>
+        <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  
+       <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#">SYGEPROS</a>
+                    </div>
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> Bénéficiaire <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="./TestIndividu.xhtml">Ajouter un candidat</a></li>
+                                <li><a href="/ui/dossierbeneficiaire/Create.xhtml">Créer Un dossier Bénéficiaire</a></li>
+                                <li><a href="/ui/fichebeneficiaire/Create.xhtml">Creer Fiche Beneficiaire</a></li>
+                                <li><a href="/ui/individu/Create.xhtml">Rechercher un Bénéficiaire</a></li>
+                            </ul>
+                           
+                           
+                        </li>
+
+                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> Projet <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="ui/programme/Create.xhtml">Céeer un Programme</a></li>
+                                <li><a href="/ui/projet/Create.xhtml">Créer un Projet</a></li>
+                                <li><a href="/ui/institution/Create.xhtml">Ajouter une Institution</a></li>
+                                <li><a href="/ui/donateur/Create.xhtml">Ajouter un Donateur</a></li>
+                                <li><a href="/ui/distributeur/Create.xhtml">Ajouter un Distributeur</a></li>
+                                <li><a href="/ui/contrat/Create.xhtml">Ajouter un Contrat</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> Point de Contact <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="ui/individu/Enregistrer.xhtml">Ajouter une organisation</a></li>
+                                <li><a href="/ui/dossierbeneficiaire/Create.xhtml">Creer un POC</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> Livraison <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="ui/individu/Enregistrer.xhtml">Ajouter une Livraison</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> Rapport <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="ui/individu/Enregistrer.xhtml">Afficher les Rapport</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> Administration <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="ui/individu/Enregistrer.xhtml">Ajouter un utilisateur</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    </ul>
+                </div>
+            </nav>
+    
+    </h:head>
+
+    <h:body>
+        <br/><br/><br/>
+        <h1>
+            <ui:insert name="title">Default Title</ui:insert>
+        </h1>
+        <p>
+            <ui:insert name="content">Default content</ui:insert>
+        </p>
+    </h:body>
+
+</html>

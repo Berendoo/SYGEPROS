@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditLivraisonTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditLivraisonLabel_idlivraison}" for="idlivraison" />
+                    <h:inputText id="idlivraison" value="#{livraisonController.selected.idlivraison}" title="#{bundle.EditLivraisonTitle_idlivraison}" />
+                    <h:outputLabel value="#{bundle.EditLivraisonLabel_quantite}" for="quantite" />
+                    <h:inputText id="quantite" value="#{livraisonController.selected.quantite}" title="#{bundle.EditLivraisonTitle_quantite}" />
+                    <h:outputLabel value="#{bundle.EditLivraisonLabel_datelivraison}" for="datelivraison" />
+                    <h:inputText id="datelivraison" value="#{livraisonController.selected.datelivraison}" title="#{bundle.EditLivraisonTitle_datelivraison}" >
+                        <f:convertDateTime pattern="MM/dd/yyyy" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditLivraisonLabel_nofacture}" for="nofacture" />
+                    <h:inputText id="nofacture" value="#{livraisonController.selected.nofacture}" title="#{bundle.EditLivraisonTitle_nofacture}" />
+                    <h:outputLabel value="#{bundle.EditLivraisonLabel_cin}" for="cin" />
+                    <h:inputText id="cin" value="#{livraisonController.selected.cin}" title="#{bundle.EditLivraisonTitle_cin}" />
+                    <h:outputLabel value="#{bundle.EditLivraisonLabel_datelancement}" for="datelancement" />
+                    <h:inputText id="datelancement" value="#{livraisonController.selected.datelancement}" title="#{bundle.EditLivraisonTitle_datelancement}" >
+                        <f:convertDateTime pattern="MM/dd/yyyy" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditLivraisonLabel_pin}" for="pin" />
+                    <h:inputText id="pin" value="#{livraisonController.selected.pin}" title="#{bundle.EditLivraisonTitle_pin}" />
+                    <h:outputLabel value="#{bundle.EditLivraisonLabel_periode}" for="periode" />
+                    <h:inputText id="periode" value="#{livraisonController.selected.periode}" title="#{bundle.EditLivraisonTitle_periode}" />
+                    <h:outputLabel value="#{bundle.EditLivraisonLabel_montant}" for="montant" />
+                    <h:inputText id="montant" value="#{livraisonController.selected.montant}" title="#{bundle.EditLivraisonTitle_montant}" />
+                    <h:outputLabel value="#{bundle.EditLivraisonLabel_devise}" for="devise" />
+                    <h:inputText id="devise" value="#{livraisonController.selected.devise}" title="#{bundle.EditLivraisonTitle_devise}" />
+                    <h:outputLabel value="#{bundle.EditLivraisonLabel_pyPayerId}" for="pyPayerId" />
+                    <h:inputText id="pyPayerId" value="#{livraisonController.selected.pyPayerId}" title="#{bundle.EditLivraisonTitle_pyPayerId}" />
+                    <h:outputLabel value="#{bundle.EditLivraisonLabel_pyPayrollNo}" for="pyPayrollNo" />
+                    <h:inputText id="pyPayrollNo" value="#{livraisonController.selected.pyPayrollNo}" title="#{bundle.EditLivraisonTitle_pyPayrollNo}" />
+                    <h:outputLabel value="#{bundle.EditLivraisonLabel_pyPayeeId}" for="pyPayeeId" />
+                    <h:inputText id="pyPayeeId" value="#{livraisonController.selected.pyPayeeId}" title="#{bundle.EditLivraisonTitle_pyPayeeId}" />
+                    <h:outputLabel value="#{bundle.EditLivraisonLabel_dossier}" for="dossier" />
+                    <h:inputText id="dossier" value="#{livraisonController.selected.dossier}" title="#{bundle.EditLivraisonTitle_dossier}" />
+                    <h:outputLabel value="#{bundle.EditLivraisonLabel_numeroch}" for="numeroch" />
+                    <h:inputText id="numeroch" value="#{livraisonController.selected.numeroch}" title="#{bundle.EditLivraisonTitle_numeroch}" />
+                    <h:outputLabel value="#{bundle.EditLivraisonLabel_serie}" for="serie" />
+                    <h:inputText id="serie" value="#{livraisonController.selected.serie}" title="#{bundle.EditLivraisonTitle_serie}" />
+                    <h:outputLabel value="#{bundle.EditLivraisonLabel_idcommune}" for="idcommune" />
+                    <h:selectOneMenu id="idcommune" value="#{livraisonController.selected.idcommune}" title="#{bundle.EditLivraisonTitle_idcommune}" required="true" requiredMessage="#{bundle.EditLivraisonRequiredMessage_idcommune}">
+                        <f:selectItems value="#{communeController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                    <h:outputLabel value="#{bundle.EditLivraisonLabel_iddidtributeur}" for="iddidtributeur" />
+                    <h:selectOneMenu id="iddidtributeur" value="#{livraisonController.selected.iddidtributeur}" title="#{bundle.EditLivraisonTitle_iddidtributeur}" >
+                        <f:selectItems value="#{distributeurController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                    <h:outputLabel value="#{bundle.EditLivraisonLabel_idfiche}" for="idfiche" />
+                    <h:selectOneMenu id="idfiche" value="#{livraisonController.selected.idfiche}" title="#{bundle.EditLivraisonTitle_idfiche}" required="true" requiredMessage="#{bundle.EditLivraisonRequiredMessage_idfiche}">
+                        <f:selectItems value="#{fichebeneficiaireController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                    <h:outputLabel value="#{bundle.EditLivraisonLabel_idprestation}" for="idprestation" />
+                    <h:selectOneMenu id="idprestation" value="#{livraisonController.selected.idprestation}" title="#{bundle.EditLivraisonTitle_idprestation}" required="true" requiredMessage="#{bundle.EditLivraisonRequiredMessage_idprestation}">
+                        <f:selectItems value="#{prestationController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                </h:panelGrid>
+                <h:commandLink action="#{livraisonController.update}" value="#{bundle.EditLivraisonSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditLivraisonViewLink}"/>
+                <br />
+                <h:commandLink action="#{livraisonController.prepareList}" value="#{bundle.EditLivraisonShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditLivraisonIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>
