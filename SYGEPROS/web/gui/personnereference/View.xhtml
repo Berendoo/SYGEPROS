@@ -9,7 +9,8 @@
         <ui:composition template="./../../template/templatepage.xhtml">
 
             <ui:define name="title">
-                <h:outputText value="#{bundle.ViewPersonnereferenceTitle}"></h:outputText>
+                <h2><h:outputText value="#{bundle.ViewPersonnereferenceTitle}"></h:outputText></h2>
+                 <hr size="5px"/>
             </ui:define>
 
             <ui:define name="content">
@@ -45,16 +46,15 @@
                 </h:panelGrid>
                 <br />
                 <h:commandLink action="#{personnereferenceController.destroyAndView}" value="#{bundle.ViewPersonnereferenceDestroyLink}"/>
-                <br />
-                <br />
+                |
                 <h:link outcome="Edit" value="#{bundle.ViewPersonnereferenceEditLink}"/>
-                <br />
+               |
                 <h:commandLink action="#{personnereferenceController.prepareCreate}" value="#{bundle.ViewPersonnereferenceCreateLink}" />
-                <br />
+              |
                 <h:commandLink action="#{personnereferenceController.prepareList}" value="#{bundle.ViewPersonnereferenceShowAllLink}"/>
+<!--                <br />
                 <br />
-                <br />
-                <h:link outcome="/index" value="#{bundle.ViewPersonnereferenceIndexLink}"/>
+                <h:link outcome="/index" value="#{bundle.ViewPersonnereferenceIndexLink}"/>-->
 
             </h:form>
             </ui:define>

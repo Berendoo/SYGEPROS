@@ -10,7 +10,8 @@
         <ui:composition template="./../../template/templatepage.xhtml">
 
             <ui:define name="title">
-              <h:outputText value="#{bundle.EditDistributeurTitle}"></h:outputText>
+                <h2><h:outputText value="#{bundle.EditDistributeurTitle}"></h:outputText></h2>
+                 <hr size="5px"/>
             </ui:define>
 
             <ui:define name="content">
@@ -41,14 +42,12 @@
                     </h:selectOneMenu>
                 </h:panelGrid>
                 <h:commandLink action="#{distributeurController.update}" value="#{bundle.EditDistributeurSaveLink}"/>
-                <br />
-                <br />
+                |
                 <h:link outcome="View" value="#{bundle.EditDistributeurViewLink}"/>
-                <br />
+               |
                 <h:commandLink action="#{distributeurController.prepareList}" value="#{bundle.EditDistributeurShowAllLink}" immediate="true"/>
-                <br />
-                <br />
-                <h:link outcome="/index" value="#{bundle.EditDistributeurIndexLink}" />
+                
+<!--                <h:link outcome="/index" value="#{bundle.EditDistributeurIndexLink}" />-->
             </h:form>
             </ui:define>
 

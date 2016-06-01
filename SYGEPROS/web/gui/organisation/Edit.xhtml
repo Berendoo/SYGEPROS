@@ -10,7 +10,8 @@
         <ui:composition template="./../../template/templatepage.xhtml">
 
             <ui:define name="title">
-                <h:outputText value="#{bundle.EditOrganisationTitle}"></h:outputText>
+                <h2><h:outputText value="#{bundle.EditOrganisationTitle}"></h:outputText></h2>
+                 <hr size="5px"/>
             </ui:define>
 
             <ui:define name="content">
@@ -43,14 +44,13 @@
                     </h:selectOneMenu>
                 </h:panelGrid>
                 <h:commandLink action="#{organisationController.update}" value="#{bundle.EditOrganisationSaveLink}"/>
-                <br />
-                <br />
+                |
                 <h:link outcome="View" value="#{bundle.EditOrganisationViewLink}"/>
-                <br />
+                |
                 <h:commandLink action="#{organisationController.prepareList}" value="#{bundle.EditOrganisationShowAllLink}" immediate="true"/>
+<!--                <br />
                 <br />
-                <br />
-                <h:link outcome="/index" value="#{bundle.EditOrganisationIndexLink}" />
+                <h:link outcome="/index" value="#{bundle.EditOrganisationIndexLink}" />-->
             </h:form>
             </ui:define>
 

@@ -63,14 +63,13 @@
                     </h:selectOneMenu>
                 </h:panelGrid>
                 <h:commandLink action="#{individuController.update}" value="#{bundle.EditIndividuSaveLink}"/>
-                <br />
-                <br />
+                |
                 <h:link outcome="View" value="#{bundle.EditIndividuViewLink}"/>
-                <br />
+              |
                 <h:commandLink action="#{individuController.prepareList}" value="#{bundle.EditIndividuShowAllLink}" immediate="true"/>
+<!--                <br />
                 <br />
-                <br />
-                <h:link outcome="/index" value="#{bundle.EditIndividuIndexLink}" />
+                <h:link outcome="/index" value="#{bundle.EditIndividuIndexLink}" />-->
             </h:form>
             </ui:define>
 

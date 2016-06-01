@@ -4,13 +4,14 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
-
+    
     <body>
-
+       
         <ui:composition template="./../../template/templatepage.xhtml">
 
             <ui:define name="title">
-                   <h:outputText value="#{bundle.CreateDistributeurTitle}"></h:outputText>
+                <h2><h:outputText value="#{bundle.CreateDistributeurTitle}"></h:outputText></h2>
+                 <hr size="5px"/>
             </ui:define>
 
             <ui:define name="content">
@@ -42,12 +43,11 @@
                 </h:panelGrid>
                 <br />
                 <h:commandLink action="#{distributeurController.create}" value="#{bundle.CreateDistributeurSaveLink}" />
-                <br />
-                <br />
+            |
                 <h:commandLink action="#{distributeurController.prepareList}" value="#{bundle.CreateDistributeurShowAllLink}" immediate="true"/>
+<!--                <br />
                 <br />
-                <br />
-                <h:link outcome="/index" value="#{bundle.CreateDistributeurIndexLink}"/>
+                <h:link outcome="/index" value="#{bundle.CreateDistributeurIndexLink}"/>-->
             </h:form>
             </ui:define>
 

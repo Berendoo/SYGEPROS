@@ -10,15 +10,16 @@
         <ui:composition template="./../../template/templatepage.xhtml">
 
             <ui:define name="title">
-                <h:outputText value="#{bundle.ViewOrganisationTitle}"></h:outputText>
+                <h2><h:outputText value="#{bundle.ViewOrganisationTitle}"></h:outputText></h2>
+                 <hr size="5px"/>
             </ui:define>
 
             <ui:define name="content">
-                <h:panelGroup id="messagePanel" layout="block">
-                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                <h:panelGroup id="messagePanel" layout="block" >
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table" />
             </h:panelGroup>
             <h:form>
-                <h:panelGrid columns="2"  border="1">
+                <h:panelGrid  columns="2"  border="1">
                     <h:outputText value="#{bundle.ViewOrganisationLabel_idorganisation}"/>
                     <h:outputText value="#{organisationController.selected.idorganisation}" title="#{bundle.ViewOrganisationTitle_idorganisation}"/>
                     <h:outputText value="#{bundle.ViewOrganisationLabel_nomorganisation}"/>
@@ -40,16 +41,15 @@
                 </h:panelGrid>
                 <br />
                 <h:commandLink action="#{organisationController.destroyAndView}" value="#{bundle.ViewOrganisationDestroyLink}"/>
-                <br />
-                <br />
+               |
                 <h:link outcome="Edit" value="#{bundle.ViewOrganisationEditLink}"/>
-                <br />
+                |
                 <h:commandLink action="#{organisationController.prepareCreate}" value="#{bundle.ViewOrganisationCreateLink}" />
-                <br />
+                |
                 <h:commandLink action="#{organisationController.prepareList}" value="#{bundle.ViewOrganisationShowAllLink}"/>
+<!--                <br />
                 <br />
-                <br />
-                <h:link outcome="/index" value="#{bundle.ViewOrganisationIndexLink}"/>
+                <h:link outcome="/index" value="#{bundle.ViewOrganisationIndexLink}"/>-->
 
             </h:form>
             </ui:define>

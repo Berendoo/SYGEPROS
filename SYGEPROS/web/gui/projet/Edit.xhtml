@@ -10,7 +10,8 @@
         <ui:composition template="./../../template/templatepage.xhtml">
 
             <ui:define name="title">
-                <h:outputText value="#{bundle.EditProjetTitle}"></h:outputText>
+                <h2>  <h:outputText value="#{bundle.EditProjetTitle}"></h:outputText></h2>
+                 <hr size="5px"/>
             </ui:define>
 
             <ui:define name="content">
@@ -39,14 +40,13 @@
                     </h:selectOneMenu>
                 </h:panelGrid>
                 <h:commandLink action="#{projetController.update}" value="#{bundle.EditProjetSaveLink}"/>
-                <br />
-                <br />
+              |
                 <h:link outcome="View" value="#{bundle.EditProjetViewLink}"/>
-                <br />
+             |
                 <h:commandLink action="#{projetController.prepareList}" value="#{bundle.EditProjetShowAllLink}" immediate="true"/>
+<!--                <br />
                 <br />
-                <br />
-                <h:link outcome="/index" value="#{bundle.EditProjetIndexLink}" />
+                <h:link outcome="/index" value="#{bundle.EditProjetIndexLink}" />-->
             </h:form>
             </ui:define>
 

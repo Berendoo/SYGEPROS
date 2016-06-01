@@ -10,7 +10,8 @@
         <ui:composition template="./../../template/templatepage.xhtml">
 
             <ui:define name="title">
-              <h:outputText value="#{bundle.ListPersonnereferenceTitle}"></h:outputText>
+                <h2><h:outputText value="#{bundle.ListPersonnereferenceTitle}"></h:outputText></h2>
+                 <hr size="5px"/>
             </ui:define>
 
             <ui:define name="content">
@@ -110,9 +111,9 @@
                 </h:panelGroup>
                 <br />
                 <h:commandLink action="#{personnereferenceController.prepareCreate}" value="#{bundle.ListPersonnereferenceCreateLink}"/>
+<!--                <br />
                 <br />
-                <br />
-                <h:link outcome="/index" value="#{bundle.ListPersonnereferenceIndexLink}"/>
+                <h:link outcome="/index" value="#{bundle.ListPersonnereferenceIndexLink}"/>-->
             </h:form>
             </ui:define>
 

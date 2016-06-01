@@ -7,6 +7,8 @@ body {
     color: #3a4f54;
     background-color: #FFFFFF;
     font-size: small;
+    margin: 20px;
+    margin-left: 20px
 }
 
 a {

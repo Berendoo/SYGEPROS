@@ -10,7 +10,8 @@
         <ui:composition template="./../../template/templatepage.xhtml">
 
             <ui:define name="title">
-                 <h:outputText value="#{bundle.CreateProjetTitle}"></h:outputText>
+                <h2><h:outputText value="#{bundle.CreateProjetTitle}"></h:outputText></h2>
+                 <hr size="5px"/>
             </ui:define>
 
             <ui:define name="content">
@@ -40,12 +41,11 @@
                 </h:panelGrid>
                 <br />
                 <h:commandLink action="#{projetController.create}" value="#{bundle.CreateProjetSaveLink}" />
-                <br />
-                <br />
+              |
                 <h:commandLink action="#{projetController.prepareList}" value="#{bundle.CreateProjetShowAllLink}" immediate="true"/>
+<!--                <br />
                 <br />
-                <br />
-                <h:link outcome="/index" value="#{bundle.CreateProjetIndexLink}"/>
+                <h:link outcome="/index" value="#{bundle.CreateProjetIndexLink}"/>-->
             </h:form>
             </ui:define>
 

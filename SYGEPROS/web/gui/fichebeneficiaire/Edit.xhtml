@@ -10,7 +10,8 @@
         <ui:composition template="./../../template/templatepage.xhtml">
 
             <ui:define name="title">
-             <h:outputText value="#{bundle.EditFichebeneficiaireTitle}"></h:outputText>
+                <h2><h:outputText value="#{bundle.EditFichebeneficiaireTitle}"></h:outputText></h2>
+              <hr size="5px"/>
             </ui:define>
 
             <ui:define name="content">
@@ -43,14 +44,13 @@
                     </h:selectOneMenu>
                 </h:panelGrid>
                 <h:commandLink action="#{fichebeneficiaireController.update}" value="#{bundle.EditFichebeneficiaireSaveLink}"/>
-                <br />
-                <br />
+                |
                 <h:link outcome="View" value="#{bundle.EditFichebeneficiaireViewLink}"/>
-                <br />
+               |
                 <h:commandLink action="#{fichebeneficiaireController.prepareList}" value="#{bundle.EditFichebeneficiaireShowAllLink}" immediate="true"/>
+<!--                <br />
                 <br />
-                <br />
-                <h:link outcome="/index" value="#{bundle.EditFichebeneficiaireIndexLink}" />
+                <h:link outcome="/index" value="#{bundle.EditFichebeneficiaireIndexLink}" />-->
             </h:form>
             </ui:define>
 

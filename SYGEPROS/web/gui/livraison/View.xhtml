@@ -10,7 +10,8 @@
         <ui:composition template="./../../template/templatepage.xhtml">
 
             <ui:define name="title">
-              <h:outputText value="#{bundle.ViewLivraisonTitle}"></h:outputText>
+                <h2><h:outputText value="#{bundle.ViewLivraisonTitle}"></h:outputText></h2>
+               <hr size="5px"/>
             </ui:define>
 
             <ui:define name="content">
@@ -66,16 +67,15 @@
                 </h:panelGrid>
                 <br />
                 <h:commandLink action="#{livraisonController.destroyAndView}" value="#{bundle.ViewLivraisonDestroyLink}"/>
-                <br />
-                <br />
+               |
                 <h:link outcome="Edit" value="#{bundle.ViewLivraisonEditLink}"/>
-                <br />
+              |
                 <h:commandLink action="#{livraisonController.prepareCreate}" value="#{bundle.ViewLivraisonCreateLink}" />
-                <br />
+                |
                 <h:commandLink action="#{livraisonController.prepareList}" value="#{bundle.ViewLivraisonShowAllLink}"/>
+<!--                <br />
                 <br />
-                <br />
-                <h:link outcome="/index" value="#{bundle.ViewLivraisonIndexLink}"/>
+                <h:link outcome="/index" value="#{bundle.ViewLivraisonIndexLink}"/>-->
 
             </h:form>
             </ui:define>

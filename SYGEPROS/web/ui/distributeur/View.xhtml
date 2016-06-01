@@ -36,16 +36,15 @@
                 </h:panelGrid>
                 <br />
                 <h:commandLink action="#{distributeurController.destroyAndView}" value="#{bundle.ViewDistributeurDestroyLink}"/>
-                <br />
-                <br />
+                |
                 <h:link outcome="Edit" value="#{bundle.ViewDistributeurEditLink}"/>
-                <br />
+                |
                 <h:commandLink action="#{distributeurController.prepareCreate}" value="#{bundle.ViewDistributeurCreateLink}" />
-                <br />
+                |
                 <h:commandLink action="#{distributeurController.prepareList}" value="#{bundle.ViewDistributeurShowAllLink}"/>
-                <br />
-                <br />
-                <h:link outcome="/index" value="#{bundle.ViewDistributeurIndexLink}"/>
+                <!--                <br />
+                                <br />
+                                <h:link outcome="/index" value="#{bundle.ViewDistributeurIndexLink}"/>-->
 
             </h:form>
         </ui:define>

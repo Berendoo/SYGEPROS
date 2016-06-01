@@ -10,7 +10,8 @@
         <ui:composition template="./../../template/templatepage.xhtml">
 
             <ui:define name="title">
-                 <h:outputText value="#{bundle.ViewProgrammeTitle}"></h:outputText>
+                <h2><h:outputText value="#{bundle.ViewProgrammeTitle}"></h:outputText></h2>
+                 <hr size="5px"/>
             </ui:define>
 
             <ui:define name="content">
@@ -36,16 +37,15 @@
                 </h:panelGrid>
                 <br />
                 <h:commandLink action="#{programmeController.destroyAndView}" value="#{bundle.ViewProgrammeDestroyLink}"/>
-                <br />
-                <br />
+               |
                 <h:link outcome="Edit" value="#{bundle.ViewProgrammeEditLink}"/>
-                <br />
+               |
                 <h:commandLink action="#{programmeController.prepareCreate}" value="#{bundle.ViewProgrammeCreateLink}" />
-                <br />
+               |
                 <h:commandLink action="#{programmeController.prepareList}" value="#{bundle.ViewProgrammeShowAllLink}"/>
+<!--                <br />
                 <br />
-                <br />
-                <h:link outcome="/index" value="#{bundle.ViewProgrammeIndexLink}"/>
+                <h:link outcome="/index" value="#{bundle.ViewProgrammeIndexLink}"/>-->
 
             </h:form>
             </ui:define>

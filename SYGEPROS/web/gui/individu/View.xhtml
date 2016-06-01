@@ -58,18 +58,17 @@
                 </h:panelGrid>
                 <br />
                 <h:commandLink action="#{individuController.destroyAndView}" value="#{bundle.ViewIndividuDestroyLink}"/>
-                <br />
-                <br />
+               |
                 <h:link outcome="Edit" value="#{bundle.ViewIndividuEditLink}"/>
-                <br />
+               |
                 <h:commandLink action="#{individuController.prepareCreate}" value="#{bundle.ViewIndividuCreateLink}" />
-                <br />
+               |
                 <h:commandLink action="#{individuController.prepareList}" value="#{bundle.ViewIndividuShowAllLink}"/>
-                <br />
+<!--                <br />
                 <br />
               
                 <br/>
-                <h:link outcome="/index" value="#{bundle.ViewIndividuIndexLink}"/>
+                <h:link outcome="/index" value="#{bundle.ViewIndividuIndexLink}"/>-->
 
             </h:form>
             </ui:define>

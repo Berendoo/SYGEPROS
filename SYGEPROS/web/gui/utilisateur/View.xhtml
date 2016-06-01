@@ -48,16 +48,15 @@
                 </h:panelGrid>
                 <br />
                 <h:commandLink action="#{utilisateurController.destroyAndView}" value="#{bundle.ViewUtilisateurDestroyLink}"/>
-                <br />
-                <br />
+               |
                 <h:link outcome="Edit" value="#{bundle.ViewUtilisateurEditLink}"/>
-                <br />
+              |
                 <h:commandLink action="#{utilisateurController.prepareCreate}" value="#{bundle.ViewUtilisateurCreateLink}" />
-                <br />
+              |
                 <h:commandLink action="#{utilisateurController.prepareList}" value="#{bundle.ViewUtilisateurShowAllLink}"/>
+<!--                <br />
                 <br />
-                <br />
-                <h:link outcome="/index" value="#{bundle.ViewUtilisateurIndexLink}"/>
+                <h:link outcome="/index" value="#{bundle.ViewUtilisateurIndexLink}"/>-->
 
             </h:form>
             </ui:define>

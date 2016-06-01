@@ -302,7 +302,8 @@ public class Individu implements Serializable {
     @Override
     public String toString() {
         //return "ht.gouv.faes.entity.Individu[ idindividu=" + idindividu + " ]";
-        return nom +" "+prenom+" "+cin;
+//        return nom +" "+prenom+" "+cin;
+        return cin;
     }
     
 }

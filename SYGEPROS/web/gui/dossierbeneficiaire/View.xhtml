@@ -10,7 +10,8 @@
         <ui:composition template="./../../template/templatepage.xhtml">
 
             <ui:define name="title">
-               <h:outputText value="#{bundle.ViewDossierbeneficiaireTitle}"></h:outputText>
+                <h2><h:outputText value="#{bundle.ViewDossierbeneficiaireTitle}"></h:outputText></h2>
+                <hr size="5px"/>
             </ui:define>
 
             <ui:define name="content">
@@ -34,16 +35,15 @@
                 </h:panelGrid>
                 <br />
                 <h:commandLink action="#{dossierbeneficiaireController.destroyAndView}" value="#{bundle.ViewDossierbeneficiaireDestroyLink}"/>
-                <br />
-                <br />
+                |
                 <h:link outcome="Edit" value="#{bundle.ViewDossierbeneficiaireEditLink}"/>
-                <br />
+              |
                 <h:commandLink action="#{dossierbeneficiaireController.prepareCreate}" value="#{bundle.ViewDossierbeneficiaireCreateLink}" />
-                <br />
+               |
                 <h:commandLink action="#{dossierbeneficiaireController.prepareList}" value="#{bundle.ViewDossierbeneficiaireShowAllLink}"/>
+<!--                <br />
                 <br />
-                <br />
-                <h:link outcome="/index" value="#{bundle.ViewDossierbeneficiaireIndexLink}"/>
+                <h:link outcome="/index" value="#{bundle.ViewDossierbeneficiaireIndexLink}"/>-->
 
             </h:form>
             </ui:define>

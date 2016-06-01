@@ -10,7 +10,8 @@
         <ui:composition template="./../../template/templatepage.xhtml">
 
             <ui:define name="title">
-              <h:outputText value="#{bundle.ViewDonateurTitle}"></h:outputText>
+                <h2><h:outputText value="#{bundle.ViewDonateurTitle}"></h:outputText></h2>
+                 <hr size="5px"/>
             </ui:define>
 
             <ui:define name="content">
@@ -46,16 +47,15 @@
                 </h:panelGrid>
                 <br />
                 <h:commandLink action="#{donateurController.destroyAndView}" value="#{bundle.ViewDonateurDestroyLink}"/>
-                <br />
-                <br />
+                |
                 <h:link outcome="Edit" value="#{bundle.ViewDonateurEditLink}"/>
-                <br />
+                |
                 <h:commandLink action="#{donateurController.prepareCreate}" value="#{bundle.ViewDonateurCreateLink}" />
-                <br />
+                |
                 <h:commandLink action="#{donateurController.prepareList}" value="#{bundle.ViewDonateurShowAllLink}"/>
+<!--                <br />
                 <br />
-                <br />
-                <h:link outcome="/index" value="#{bundle.ViewDonateurIndexLink}"/>
+                <h:link outcome="/index" value="#{bundle.ViewDonateurIndexLink}"/>-->
 
             </h:form>
             </ui:define>

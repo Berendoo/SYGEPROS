@@ -153,7 +153,8 @@ public class Dossierbeneficiaire implements Serializable {
 
     @Override
     public String toString() {
-        return "ht.gouv.faes.entity.Dossierbeneficiaire[ iddossierbeneficiaire=" + iddossierbeneficiaire + " ]";
+        //return "ht.gouv.faes.entity.Dossierbeneficiaire[ iddossierbeneficiaire=" + iddossierbeneficiaire + " ]";
+        return " "+iddossierbeneficiaire;
     }
     
 }
