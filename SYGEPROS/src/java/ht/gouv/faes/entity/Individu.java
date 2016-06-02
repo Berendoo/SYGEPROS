@@ -51,13 +51,13 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "Individu.findByDateenregistrement", query = "SELECT i FROM Individu i WHERE i.dateenregistrement = :dateenregistrement"),
     @NamedQuery(name = "Individu.findByNiveau", query = "SELECT i FROM Individu i WHERE i.niveau = :niveau")})
 public class Individu implements Serializable {
+    
     private static final long serialVersionUID = 1L;
-    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = true)
     //@NotNull
     @Column(name = "IDINDIVIDU")
-//    @OneToOne
+    @Id
     private Integer idindividu;
     @Basic(optional = false)
     @NotNull
@@ -93,8 +93,7 @@ public class Individu implements Serializable {
     private Character sexe;
     // @Pattern(regexp="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?", message="Invalid email")//if the field contains email address consider using this annotation to enforce field validation
     @Basic(optional = false)
-    @NotNull
-    @Size(min = 1, max = 50)
+//    @Size(min = 1, max = 50)
     @Column(name = "EMAIL")
     private String email;
     @Size(max = 50)
@@ -301,9 +300,7 @@ public class Individu implements Serializable {
 
     @Override
     public String toString() {
-        //return "ht.gouv.faes.entity.Individu[ idindividu=" + idindividu + " ]";
-//        return nom +" "+prenom+" "+cin;
-        return cin;
+     return "ht.gouv.faes.entity.Individu[ idindividu=" + idindividu + " ]";
     }
     
 }

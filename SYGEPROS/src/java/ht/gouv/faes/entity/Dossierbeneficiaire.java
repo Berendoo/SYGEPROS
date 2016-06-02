@@ -17,7 +17,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -51,7 +51,6 @@ public class Dossierbeneficiaire implements Serializable {
     @Basic(optional = false)
     @NotNull
     @Column(name = "IDINDIVIDU")
-//    @OneToOne
     private int idindividu;
     @Basic(optional = false)
     @NotNull
@@ -65,7 +64,7 @@ public class Dossierbeneficiaire implements Serializable {
     private Date datecreation;
     @Column(name = "CreatedBy")
     private Integer createdBy;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "iddossierbeneficiaire")
+    @OneToOne(cascade = CascadeType.ALL, mappedBy = "iddossierbeneficiaire")
     private List<Fichebeneficiaire> fichebeneficiaireList;
 
     public Dossierbeneficiaire() {

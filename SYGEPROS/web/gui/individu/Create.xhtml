@@ -7,12 +7,12 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 
     <body >
-
+        <link href="../../resources/footer.css" rel="stylesheet" type="text/css"/>
         <ui:composition template="./../../template/templatepage.xhtml">
 
             <ui:define name="title">
                 <h2><h:outputText value="#{bundle.CreateIndividuTitle}"></h:outputText></h2>
-                <hr size="5px"/>
+                <hr size="5px" style="box-shadow: 0 0 10px 1px black;"/>
             </ui:define>
 
             <ui:define name="content">
@@ -28,7 +28,7 @@
                     <h:outputLabel value="#{bundle.CreateIndividuLabel_prenom}" for="prenom" />
                     <h:inputText id="prenom" value="#{individuController.selected.prenom}" title="#{bundle.CreateIndividuTitle_prenom}" required="true" requiredMessage="#{bundle.CreateIndividuRequiredMessage_prenom}"/>
                     <h:outputLabel value="#{bundle.CreateIndividuLabel_datenaissance}" for="datenaissance" />
-                    <h:inputText id="datenaissance" value="#{individuController.selected.datenaissance}" title="#{bundle.CreateIndividuTitle_datenaissance}" required="true" requiredMessage="#{bundle.CreateIndividuRequiredMessage_datenaissance}" a:placeholder="MM/dd/yyyy">
+                    <h:inputText  id="datenaissance" value="#{individuController.selected.datenaissance}" title="#{bundle.CreateIndividuTitle_datenaissance}" required="true" requiredMessage="#{bundle.CreateIndividuRequiredMessage_datenaissance}" a:placeholder="MM/dd/yyyy">
                         <f:convertDateTime pattern="MM/dd/yyyy" />
                     </h:inputText>
                     <h:outputLabel value="#{bundle.CreateIndividuLabel_cin}" for="cin" />
@@ -40,7 +40,7 @@
                     <h:outputLabel value="#{bundle.CreateIndividuLabel_sexe}" for="sexe" />
                     <h:inputText id="sexe" value="#{individuController.selected.sexe}" title="#{bundle.CreateIndividuTitle_sexe}" required="true" requiredMessage="#{bundle.CreateIndividuRequiredMessage_sexe}"/>
                     <h:outputLabel value="#{bundle.CreateIndividuLabel_email}" for="email" />
-                    <h:inputText id="email" value="#{individuController.selected.email}" title="#{bundle.CreateIndividuTitle_email}" required="true" requiredMessage="#{bundle.CreateIndividuRequiredMessage_email}"/>
+                    <h:inputText id="email" value="#{individuController.selected.email}" title="#{bundle.CreateIndividuTitle_email}" required="false" requiredMessage="#{bundle.CreateIndividuRequiredMessage_email}"/>
                     <h:outputLabel value="#{bundle.CreateIndividuLabel_lieunaissance}" for="lieunaissance" />
                     <h:inputText id="lieunaissance" value="#{individuController.selected.lieunaissance}" title="#{bundle.CreateIndividuTitle_lieunaissance}" />
                     <h:outputLabel value="#{bundle.CreateIndividuLabel_adresse}" for="adresse" />
@@ -68,10 +68,10 @@
                 <h:commandLink action="#{individuController.create}" value="#{bundle.CreateIndividuSaveLink}" />
                  |
                 <h:commandLink action="#{individuController.prepareList}" value="#{bundle.CreateIndividuShowAllLink}" immediate="true"/>
-                |
+<!--                |
                
                          
-                <h:link outcome="/index" value="#{bundle.CreateIndividuIndexLink}"/>
+                <h:link outcome="/index" value="#{bundle.CreateIndividuIndexLink}"/>-->
             </h:form>
             </ui:define>
 
