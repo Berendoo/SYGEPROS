@@ -88,6 +88,7 @@ public class ContratController implements Serializable {
             JsfUtil.addErrorMessage(e, ResourceBundle.getBundle("/Bundle").getString("PersistenceErrorOccured"));
             return null;
         }
+        
     }
 
     public String prepareEdit() {

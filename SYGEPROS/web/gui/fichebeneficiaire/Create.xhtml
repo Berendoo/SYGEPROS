@@ -18,7 +18,7 @@
            <h:panelGroup id="messagePanel" layout="block">
                 <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
             </h:panelGroup>
-            <h:form>
+            <h:form style="margin-left:25px">
                 <h:panelGrid columns="2">
                     <h:outputLabel value="#{bundle.CreateFichebeneficiaireLabel_idfiche}" for="idfiche" />
                     <h:inputText id="idfiche" value="#{fichebeneficiaireController.selected.idfiche}" title="#{bundle.CreateFichebeneficiaireTitle_idfiche}" disabled="true"/>
@@ -44,8 +44,10 @@
                     </h:selectOneMenu>
                 </h:panelGrid>
                 <br />
+                <span class="glyphicon glyphicon-floppy-saved"></span>
                 <h:commandLink action="#{fichebeneficiaireController.create}" value="#{bundle.CreateFichebeneficiaireSaveLink}" />
                |
+              <span class="glyphicon glyphicon-folder-open"></span>
                 <h:commandLink action="#{fichebeneficiaireController.prepareList}" value="#{bundle.CreateFichebeneficiaireShowAllLink}" immediate="true"/>
 <!--                <br />
                 <br />

@@ -11,11 +11,11 @@
 
             <ui:define name="title">
                 <h2><h:outputText value="#{bundle.ListDossierbeneficiaireTitle}"></h:outputText></h2>
-             <hr size="5px"style="box-shadow: 0 0 10px 1px black;"/>
+             <hr size="5px" style="box-shadow: 0 0 10px 1px black;"/>
             </ui:define>
 
             <ui:define name="content">
-               <h:form styleClass="jsfcrud_list_form">
+                <h:form styleClass="jsfcrud_list_form" style="margin-left:25px">
                 <h:panelGroup id="messagePanel" layout="block">
                     <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
                 </h:panelGroup>
@@ -70,6 +70,7 @@
                     </h:dataTable>
                 </h:panelGroup>
                 <br />
+             <span class="glyphicon glyphicon-plus"></span>
                 <h:commandLink action="#{dossierbeneficiaireController.prepareCreate}" value="#{bundle.ListDossierbeneficiaireCreateLink}"/>
 <!--                <br />
                 <br />

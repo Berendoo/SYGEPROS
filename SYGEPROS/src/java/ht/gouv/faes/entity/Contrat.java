@@ -21,6 +21,7 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -47,6 +48,7 @@ public class Contrat implements Serializable {
     private Integer idcontrat;
     @Basic(optional = false)
     @NotNull
+    @Past
     @Column(name = "DATEDEBUT")
     @Temporal(TemporalType.DATE)
     private Date datedebut;

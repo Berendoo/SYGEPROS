@@ -66,7 +66,7 @@ public class Donateur implements Serializable {
     private String adresse;
     @Basic(optional = false)
     @NotNull
-    @Size(min = 1, max = 15)
+    @Size(min = 8, max = 11)
     @Column(name = "TELEPHONE1")
     private String telephone1;
     @Size(max = 15)

@@ -18,7 +18,7 @@
               <h:panelGroup id="messagePanel" layout="block">
                 <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
             </h:panelGroup>
-            <h:form>
+          <h:form style="margin-left:25px">
                 <h:panelGrid columns="2"  border="1">
                     <h:outputText value="#{bundle.ViewFichebeneficiaireLabel_idfiche}"/>
                     <h:outputText value="#{fichebeneficiaireController.selected.idfiche}" title="#{bundle.ViewFichebeneficiaireTitle_idfiche}"/>
@@ -38,12 +38,16 @@
                     <h:outputText value="#{fichebeneficiaireController.selected.idtypebeneficiaire.nomtypebeneficiaire}" title="#{bundle.ViewFichebeneficiaireTitle_idtypebeneficiaire}"/>
                 </h:panelGrid>
                 <br />
+                <span class="glyphicon glyphicon-floppy-remove"></span>
                 <h:commandLink action="#{fichebeneficiaireController.destroyAndView}" value="#{bundle.ViewFichebeneficiaireDestroyLink}"/>
                |
+               <span class="glyphicon glyphicon-pencil"></span>
                 <h:link outcome="Edit" value="#{bundle.ViewFichebeneficiaireEditLink}"/>
                 |
+                <span class="glyphicon glyphicon-plus"></span>
                 <h:commandLink action="#{fichebeneficiaireController.prepareCreate}" value="#{bundle.ViewFichebeneficiaireCreateLink}" />
                |
+               <span class="glyphicon glyphicon-folder-open"></span>
                 <h:commandLink action="#{fichebeneficiaireController.prepareList}" value="#{bundle.ViewFichebeneficiaireShowAllLink}"/>
 <!--                <br />
                 <br />

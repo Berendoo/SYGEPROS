@@ -7,14 +7,13 @@ package ht.gouv.faes.entity;
 
 import java.io.Serializable;
 import java.util.Date;
-import java.util.List;
 import javax.persistence.Basic;
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToOne;
@@ -22,9 +21,9 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -36,7 +35,6 @@ import javax.xml.bind.annotation.XmlTransient;
 @NamedQueries({
     @NamedQuery(name = "Dossierbeneficiaire.findAll", query = "SELECT d FROM Dossierbeneficiaire d"),
     @NamedQuery(name = "Dossierbeneficiaire.findByIddossierbeneficiaire", query = "SELECT d FROM Dossierbeneficiaire d WHERE d.iddossierbeneficiaire = :iddossierbeneficiaire"),
-    @NamedQuery(name = "Dossierbeneficiaire.findByIdindividu", query = "SELECT d FROM Dossierbeneficiaire d WHERE d.idindividu = :idindividu"),
     @NamedQuery(name = "Dossierbeneficiaire.findByDescription", query = "SELECT d FROM Dossierbeneficiaire d WHERE d.description = :description"),
     @NamedQuery(name = "Dossierbeneficiaire.findByDatecreation", query = "SELECT d FROM Dossierbeneficiaire d WHERE d.datecreation = :datecreation"),
     @NamedQuery(name = "Dossierbeneficiaire.findByCreatedBy", query = "SELECT d FROM Dossierbeneficiaire d WHERE d.createdBy = :createdBy")})
@@ -50,22 +48,20 @@ public class Dossierbeneficiaire implements Serializable {
     private Integer iddossierbeneficiaire;
     @Basic(optional = false)
     @NotNull
-    @Column(name = "IDINDIVIDU")
-    private int idindividu;
-    @Basic(optional = false)
-    @NotNull
     @Size(min = 1, max = 150)
     @Column(name = "DESCRIPTION")
     private String description;
     @Basic(optional = false)
     @NotNull
+    @Past
     @Column(name = "DATECREATION")
     @Temporal(TemporalType.DATE)
     private Date datecreation;
     @Column(name = "CreatedBy")
     private Integer createdBy;
-    @OneToOne(cascade = CascadeType.ALL, mappedBy = "iddossierbeneficiaire")
-    private List<Fichebeneficiaire> fichebeneficiaireList;
+    @JoinColumn(name = "IDINDIVIDU", referencedColumnName = "IDINDIVIDU")
+    @OneToOne(optional = false)
+    private Individu idindividu;
 
     public Dossierbeneficiaire() {
     }
@@ -74,9 +70,8 @@ public class Dossierbeneficiaire implements Serializable {
         this.iddossierbeneficiaire = iddossierbeneficiaire;
     }
 
-    public Dossierbeneficiaire(Integer iddossierbeneficiaire, int idindividu, String description, Date datecreation) {
+    public Dossierbeneficiaire(Integer iddossierbeneficiaire, String description, Date datecreation) {
         this.iddossierbeneficiaire = iddossierbeneficiaire;
-        this.idindividu = idindividu;
         this.description = description;
         this.datecreation = datecreation;
     }
@@ -87,14 +82,6 @@ public class Dossierbeneficiaire implements Serializable {
 
     public void setIddossierbeneficiaire(Integer iddossierbeneficiaire) {
         this.iddossierbeneficiaire = iddossierbeneficiaire;
-    }
-
-    public int getIdindividu() {
-        return idindividu;
-    }
-
-    public void setIdindividu(int idindividu) {
-        this.idindividu = idindividu;
     }
 
     public String getDescription() {
@@ -121,13 +108,12 @@ public class Dossierbeneficiaire implements Serializable {
         this.createdBy = createdBy;
     }
 
-    @XmlTransient
-    public List<Fichebeneficiaire> getFichebeneficiaireList() {
-        return fichebeneficiaireList;
+    public Individu getIdindividu() {
+        return idindividu;
     }
 
-    public void setFichebeneficiaireList(List<Fichebeneficiaire> fichebeneficiaireList) {
-        this.fichebeneficiaireList = fichebeneficiaireList;
+    public void setIdindividu(Individu idindividu) {
+        this.idindividu = idindividu;
     }
 
     @Override
@@ -152,8 +138,8 @@ public class Dossierbeneficiaire implements Serializable {
 
     @Override
     public String toString() {
-        //return "ht.gouv.faes.entity.Dossierbeneficiaire[ iddossierbeneficiaire=" + iddossierbeneficiaire + " ]";
-        return " "+iddossierbeneficiaire;
+        //return "entities.Dossierbeneficiaire[ iddossierbeneficiaire=" + iddossierbeneficiaire + " ]";
+        return ""+iddossierbeneficiaire;
     }
     
 }

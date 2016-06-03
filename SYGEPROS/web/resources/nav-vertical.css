@@ -1,0 +1,33 @@
+@media only screen and (min-width: 800px) {
+  .cd-vertical-nav {
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 90px;
+  }
+  .cd-vertical-nav::before {
+    /* this is the navigation background */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    transform: translateX(100%);
+    transition: transform 0.4s;
+  }
+  .no-touch .cd-vertical-nav:hover::before, 
+  .touch .cd-vertical-nav::before {
+    transform: translateX(0);
+  }
+  .cd-vertical-nav .label {
+    display: block;
+    transform: translateX(100%);
+    transition: transform 0.4s;
+  }
+  .no-touch .cd-vertical-nav:hover .label, 
+  .touch .cd-vertical-nav .label {
+    transform: translateX(0);
+  }
+}

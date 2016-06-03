@@ -57,7 +57,7 @@ public class Distributeur implements Serializable {
     private String nomdistributeur;
     @Basic(optional = false)
     @NotNull
-    @Size(min = 1, max = 11)
+    @Size(min = 8, max = 11)
     @Column(name = "TELEPHONE")
     private String telephone;
     @Basic(optional = false)

@@ -18,7 +18,7 @@
                 <h:panelGroup id="messagePanel" layout="block">
                 <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
             </h:panelGroup>
-            <h:form>
+            <h:form style="margin-left:25px">
                 <h:panelGrid columns="2"  border="1">
                     <h:outputText value="#{bundle.ViewContratLabel_idcontrat}"/>
                     <h:outputText value="#{contratController.selected.idcontrat}" title="#{bundle.ViewContratTitle_idcontrat}"/>
@@ -38,17 +38,20 @@
                     <h:outputText value="#{contratController.selected.idprojet}" title="#{bundle.ViewContratTitle_idprojet}"/>
                 </h:panelGrid>
                 <br />
+                <span class="glyphicon glyphicon-floppy-remove"></span>
                 <h:commandLink action="#{contratController.destroyAndView}" value="#{bundle.ViewContratDestroyLink}"/>
-                <br />
-                <br />
+                |
+                <span class="glyphicon glyphicon-pencil"></span>
                 <h:link outcome="Edit" value="#{bundle.ViewContratEditLink}"/>
-                <br />
+                |
+                <span class="glyphicon glyphicon-plus"></span>
                 <h:commandLink action="#{contratController.prepareCreate}" value="#{bundle.ViewContratCreateLink}" />
-                <br />
+                |
+               <span class="glyphicon glyphicon-folder-open"></span>
                 <h:commandLink action="#{contratController.prepareList}" value="#{bundle.ViewContratShowAllLink}"/>
+<!--                <br />
                 <br />
-                <br />
-                <h:link outcome="/index" value="#{bundle.ViewContratIndexLink}"/>
+                <h:link outcome="/index" value="#{bundle.ViewContratIndexLink}"/>-->
 
             </h:form>
             </ui:define>

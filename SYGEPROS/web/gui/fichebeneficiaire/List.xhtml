@@ -15,7 +15,7 @@
             </ui:define>
 
             <ui:define name="content">
-             <h:form styleClass="jsfcrud_list_form">
+             <h:form styleClass="jsfcrud_list_form" style="margin-left:25px">
                 <h:panelGroup id="messagePanel" layout="block">
                     <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
                 </h:panelGroup>
@@ -82,6 +82,7 @@
                     </h:dataTable>
                 </h:panelGroup>
                 <br />
+                <span class="glyphicon glyphicon-plus"></span>
                 <h:commandLink action="#{fichebeneficiaireController.prepareCreate}" value="#{bundle.ListFichebeneficiaireCreateLink}"/>
 <!--                <br />
                 <br />

@@ -18,7 +18,7 @@
                 <h:panelGroup id="messagePanel" layout="block">
                 <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
             </h:panelGroup>
-            <h:form>
+       <h:form style="margin-left:25px">
                 <h:panelGrid columns="2">
                     <h:outputLabel value="#{bundle.CreateProgrammeLabel_idprogramme}" for="idprogramme" />
                     <h:inputText id="idprogramme" value="#{programmeController.selected.idprogramme}" title="#{bundle.CreateProgrammeTitle_idprogramme}" disabled="true"/>
@@ -38,8 +38,10 @@
                     </h:selectOneMenu>
                 </h:panelGrid>
                 <br />
+           <span class="glyphicon glyphicon-folder-open"></span>
                 <h:commandLink action="#{programmeController.create}" value="#{bundle.CreateProgrammeSaveLink}" />
                |
+               <span class="glyphicon glyphicon-new-window"></span>
                 <h:commandLink action="#{programmeController.prepareList}" value="#{bundle.CreateProgrammeShowAllLink}" immediate="true"/>
 <!--                <br />
                 <br />

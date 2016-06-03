@@ -19,7 +19,7 @@
             <h:panelGroup id="messagePanel" layout="block">
                 <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
             </h:panelGroup>
-            <h:form>
+             <h:form style="margin-left:25px">
                 <h:panelGrid columns="2">
                     <h:outputLabel value="#{bundle.CreateInstitutionLabel_idinstitution}" for="idinstitution" />
                     <h:inputText id="idinstitution" value="#{institutionController.selected.idinstitution}" title="#{bundle.CreateInstitutionTitle_idinstitution}" disabled="true"/>
@@ -47,13 +47,14 @@
                     </h:selectOneMenu>
                 </h:panelGrid>
                 <br />
+                <span class="glyphicon glyphicon-floppy-saved"></span>
                 <h:commandLink action="#{institutionController.create}" value="#{bundle.CreateInstitutionSaveLink}" />
-                <br />
-                <br />
+                |
+               <span class="glyphicon glyphicon-folder-open"></span>
                 <h:commandLink action="#{institutionController.prepareList}" value="#{bundle.CreateInstitutionShowAllLink}" immediate="true"/>
+<!--                <br />
                 <br />
-                <br />
-                <h:link outcome="/index" value="#{bundle.CreateInstitutionIndexLink}"/>
+                <h:link outcome="/index" value="#{bundle.CreateInstitutionIndexLink}"/>-->
             </h:form>
             </ui:define>
 

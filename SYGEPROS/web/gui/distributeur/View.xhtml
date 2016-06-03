@@ -17,7 +17,7 @@
              <h:panelGroup id="messagePanel" layout="block">
                 <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
             </h:panelGroup>
-            <h:form>
+          <h:form style="margin-left:25px">
                 <h:panelGrid columns="2"  border="1">
                     <h:outputText value="#{bundle.ViewDistributeurLabel_iddistributeur}"/>
                     <h:outputText value="#{distributeurController.selected.iddistributeur}" title="#{bundle.ViewDistributeurTitle_iddistributeur}"/>
@@ -39,12 +39,16 @@
                     <h:outputText value="#{distributeurController.selected.idcommune}" title="#{bundle.ViewDistributeurTitle_idcommune}"/>
                 </h:panelGrid>
                 <br />
+                <span class="glyphicon glyphicon-floppy-remove"></span>
                 <h:commandLink action="#{distributeurController.destroyAndView}" value="#{bundle.ViewDistributeurDestroyLink}"/>
                 |
+                <span class="glyphicon glyphicon-pencil"></span>
                 <h:link outcome="Edit" value="#{bundle.ViewDistributeurEditLink}"/>
                |
+                <span class="glyphicon glyphicon-plus"></span>
                 <h:commandLink action="#{distributeurController.prepareCreate}" value="#{bundle.ViewDistributeurCreateLink}" />
                |
+               <span class="glyphicon glyphicon-folder-open"></span>
                 <h:commandLink action="#{distributeurController.prepareList}" value="#{bundle.ViewDistributeurShowAllLink}"/>
 <!--                <br />
                 <br />

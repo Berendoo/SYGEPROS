@@ -21,6 +21,7 @@ import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -61,14 +62,16 @@ public class Livraison implements Serializable {
     private Integer quantite;
     @Column(name = "DATELIVRAISON")
     @Temporal(TemporalType.DATE)
+    @Past
     private Date datelivraison;
     @Size(max = 15)
     @Column(name = "NOFACTURE")
     private String nofacture;
-    @Size(max = 17)
+    @Size(min=17 ,max = 17)
     @Column(name = "CIN")
     private String cin;
     @Column(name = "DATELANCEMENT")
+    @Past
     @Temporal(TemporalType.DATE)
     private Date datelancement;
     @Size(max = 10)

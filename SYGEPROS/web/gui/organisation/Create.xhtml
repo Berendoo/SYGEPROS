@@ -19,7 +19,7 @@
                 <h:panelGroup id="messagePanel" layout="block">
                 <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
             </h:panelGroup>
-            <h:form>
+           <h:form style="margin-left:25px">
                 <h:panelGrid columns="2">
                     <h:outputLabel value="#{bundle.CreateOrganisationLabel_idorganisation}" for="idorganisation" />
                     <h:inputText id="idorganisation" value="#{organisationController.selected.idorganisation}" title="#{bundle.CreateOrganisationTitle_idorganisation}" disabled="true"/>
@@ -45,8 +45,10 @@
                     </h:selectOneMenu>
                 </h:panelGrid>
                 <br />
+                <span class="glyphicon glyphicon-floppy-saved"></span>
                 <h:commandLink action="#{organisationController.create}" value="#{bundle.CreateOrganisationSaveLink}" />
                |
+              <span class="glyphicon glyphicon-folder-open"></span>
                 <h:commandLink action="#{organisationController.prepareList}" value="#{bundle.CreateOrganisationShowAllLink}" immediate="true"/>
 <!--                <br />
                 <br />

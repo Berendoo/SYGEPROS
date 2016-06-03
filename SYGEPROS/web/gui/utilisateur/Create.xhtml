@@ -18,7 +18,7 @@
                 <h:panelGroup id="messagePanel" layout="block">
                 <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
             </h:panelGroup>
-            <h:form>
+          <h:form style="margin-left:25px">
                 <h:panelGrid columns="2">
                     <h:outputLabel value="#{bundle.CreateUtilisateurLabel_idutilisateur}" for="idutilisateur" />
                     <h:inputText id="idutilisateur" value="#{utilisateurController.selected.idutilisateur}" title="#{bundle.CreateUtilisateurTitle_idutilisateur}" disabled="true"/>
@@ -50,6 +50,7 @@
                     </h:selectOneMenu>
                 </h:panelGrid>
                 <br />
+                <span class="glyphicon glyphicon-floppy-saved"></span>
                 <h:commandLink action="#{utilisateurController.create}" value="#{bundle.CreateUtilisateurSaveLink}" />
               |
                 <h:commandLink action="#{utilisateurController.prepareList}" value="#{bundle.CreateUtilisateurShowAllLink}" immediate="true"/>

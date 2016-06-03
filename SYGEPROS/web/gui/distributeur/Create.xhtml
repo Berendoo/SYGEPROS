@@ -18,7 +18,7 @@
                 <h:panelGroup id="messagePanel" layout="block">
                 <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
             </h:panelGroup>
-            <h:form>
+           <h:form style="margin-left:25px">
                 <h:panelGrid columns="2">
                     <h:outputLabel value="#{bundle.CreateDistributeurLabel_iddistributeur}" for="iddistributeur" />
                     <h:inputText id="iddistributeur" value="#{distributeurController.selected.iddistributeur}" title="#{bundle.CreateDistributeurTitle_iddistributeur}" disabled="true"/>
@@ -42,8 +42,10 @@
                     </h:selectOneMenu>
                 </h:panelGrid>
                 <br />
+                <span class="glyphicon glyphicon-floppy-saved"></span>
                 <h:commandLink action="#{distributeurController.create}" value="#{bundle.CreateDistributeurSaveLink}" />
             |
+        <span class="glyphicon glyphicon-folder-open"></span>
                 <h:commandLink action="#{distributeurController.prepareList}" value="#{bundle.CreateDistributeurShowAllLink}" immediate="true"/>
 <!--                <br />
                 <br />

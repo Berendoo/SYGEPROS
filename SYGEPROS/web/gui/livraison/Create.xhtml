@@ -19,8 +19,8 @@
                 <h:panelGroup id="messagePanel" layout="block">
                 <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
             </h:panelGroup>
-            <h:form>
-                <h:panelGrid columns="2">
+            <h:form style="margin-left:25px">
+                <h:panelGrid columns="6">
                     <h:outputLabel value="#{bundle.CreateLivraisonLabel_idlivraison}" for="idlivraison" />
                     <h:inputText id="idlivraison" value="#{livraisonController.selected.idlivraison}" title="#{bundle.CreateLivraisonTitle_idlivraison}" disabled="true"/>
                     <h:outputLabel value="#{bundle.CreateLivraisonLabel_quantite}" for="quantite" />
@@ -75,8 +75,10 @@
                     </h:selectOneMenu>
                 </h:panelGrid>
                 <br />
+                <span class="glyphicon glyphicon-floppy-saved"></span>
                 <h:commandLink action="#{livraisonController.create}" value="#{bundle.CreateLivraisonSaveLink}" />
                |
+              <span class="glyphicon glyphicon-folder-open"></span>
                 <h:commandLink action="#{livraisonController.prepareList}" value="#{bundle.CreateLivraisonShowAllLink}" immediate="true"/>
 <!--                <br />
                 <br />

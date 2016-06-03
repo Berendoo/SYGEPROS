@@ -11,14 +11,14 @@
 
             <ui:define name="title">
                 <h2><h:outputText value="#{bundle.ViewIndividuTitle}"></h:outputText></h2>
-                 <hr size="5px"style="box-shadow: 0 0 10px 1px black;"/>
+                 <hr size="5px" style="box-shadow: 0 0 10px 1px black;"/>
             </ui:define>
 
             <ui:define name="content">
              <h:panelGroup id="messagePanel" layout="block">
                 <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
             </h:panelGroup>
-            <h:form>
+           <h:form style="margin-left:25px">
                 <h:panelGrid columns="2"  border="1">
                     <h:outputText value="#{bundle.ViewIndividuLabel_idindividu}"/>
                     <h:outputText value="#{individuController.selected.idindividu}" title="#{bundle.ViewIndividuTitle_idindividu}"/>
@@ -58,12 +58,16 @@
                     <h:outputText value="#{individuController.selected.createdBy}" title="#{bundle.ViewIndividuTitle_createdBy}"/>
                 </h:panelGrid>
                 <br />
+                <span class="glyphicon glyphicon-floppy-remove"></span>
                 <h:commandLink action="#{individuController.destroyAndView}" value="#{bundle.ViewIndividuDestroyLink}"/>
                |
+               <span class="glyphicon glyphicon-pencil"></span>
                 <h:link outcome="Edit" value="#{bundle.ViewIndividuEditLink}"/>
                |
+               <span class="glyphicon glyphicon-plus"></span>
                 <h:commandLink action="#{individuController.prepareCreate}" value="#{bundle.ViewIndividuCreateLink}" />
                |
+               <span class="glyphicon glyphicon-folder-open"></span>
                 <h:commandLink action="#{individuController.prepareList}" value="#{bundle.ViewIndividuShowAllLink}"/>
 <!--                <br />
                 <br />

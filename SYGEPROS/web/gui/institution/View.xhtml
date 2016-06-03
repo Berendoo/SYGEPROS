@@ -18,7 +18,7 @@
              <h:panelGroup id="messagePanel" layout="block">
                 <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
             </h:panelGroup>
-            <h:form>
+          <h:form style="margin-left:25px">
                 <h:panelGrid columns="2"  border="1">
                     <h:outputText value="#{bundle.ViewInstitutionLabel_idinstitution}"/>
                     <h:outputText value="#{institutionController.selected.idinstitution}" title="#{bundle.ViewInstitutionTitle_idinstitution}"/>
@@ -44,17 +44,20 @@
                     <h:outputText value="#{institutionController.selected.idcommune}" title="#{bundle.ViewInstitutionTitle_idcommune}"/>
                 </h:panelGrid>
                 <br />
+                <span class="glyphicon glyphicon-floppy-remove"></span>
                 <h:commandLink action="#{institutionController.destroyAndView}" value="#{bundle.ViewInstitutionDestroyLink}"/>
-                <br />
-                <br />
+                |
+                <span class="glyphicon glyphicon-pencil"></span>
                 <h:link outcome="Edit" value="#{bundle.ViewInstitutionEditLink}"/>
-                <br />
+               |
+                <span class="glyphicon glyphicon-plus"></span>
                 <h:commandLink action="#{institutionController.prepareCreate}" value="#{bundle.ViewInstitutionCreateLink}" />
-                <br />
+                |
+                <span class="glyphicon glyphicon-folder-open"></span>
                 <h:commandLink action="#{institutionController.prepareList}" value="#{bundle.ViewInstitutionShowAllLink}"/>
+<!--                <br />
                 <br />
-                <br />
-                <h:link outcome="/index" value="#{bundle.ViewInstitutionIndexLink}"/>
+                <h:link outcome="/index" value="#{bundle.ViewInstitutionIndexLink}"/>-->
 
             </h:form>
             </ui:define>

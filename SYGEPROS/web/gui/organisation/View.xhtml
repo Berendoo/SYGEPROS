@@ -18,7 +18,7 @@
                 <h:panelGroup id="messagePanel" layout="block" >
                 <h:messages errorStyle="color: red" infoStyle="color: green" layout="table" />
             </h:panelGroup>
-            <h:form>
+              <h:form style="margin-left:25px">
                 <h:panelGrid  columns="2"  border="1">
                     <h:outputText value="#{bundle.ViewOrganisationLabel_idorganisation}"/>
                     <h:outputText value="#{organisationController.selected.idorganisation}" title="#{bundle.ViewOrganisationTitle_idorganisation}"/>
@@ -40,12 +40,16 @@
                     <h:outputText value="#{organisationController.selected.idtypeorganisation}" title="#{bundle.ViewOrganisationTitle_idtypeorganisation}"/>
                 </h:panelGrid>
                 <br />
+                <span class="glyphicon glyphicon-floppy-remove"></span>
                 <h:commandLink action="#{organisationController.destroyAndView}" value="#{bundle.ViewOrganisationDestroyLink}"/>
                |
+               <span class="glyphicon glyphicon-pencil"></span>
                 <h:link outcome="Edit" value="#{bundle.ViewOrganisationEditLink}"/>
                 |
+               <span class="glyphicon glyphicon-plus"></span>
                 <h:commandLink action="#{organisationController.prepareCreate}" value="#{bundle.ViewOrganisationCreateLink}" />
                 |
+                <span class="glyphicon glyphicon-folder-open"></span>
                 <h:commandLink action="#{organisationController.prepareList}" value="#{bundle.ViewOrganisationShowAllLink}"/>
 <!--                <br />
                 <br />

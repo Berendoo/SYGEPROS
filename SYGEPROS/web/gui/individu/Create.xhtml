@@ -6,8 +6,8 @@
       xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 
-    <body >
-        <link href="../../resources/footer.css" rel="stylesheet" type="text/css"/>
+    <body>
+        
         <ui:composition template="./../../template/templatepage.xhtml">
 
             <ui:define name="title">
@@ -19,7 +19,7 @@
               <h:panelGroup id="messagePanel" layout="block">
                 <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
             </h:panelGroup>
-            <h:form>
+            <h:form style="margin-left:25px">
                 <h:panelGrid columns="2">
                     <h:outputLabel value="#{bundle.CreateIndividuLabel_idindividu}" for="idindividu"  />
                     <h:inputText id="idindividu" value="#{individuController.selected.idindividu}" title="#{bundle.CreateIndividuTitle_idindividu}"  disabled="true" />
@@ -65,8 +65,10 @@
                     </h:selectOneMenu>-->
                 </h:panelGrid>
                 <br />
+                <span class="glyphicon glyphicon-floppy-saved"></span>
                 <h:commandLink action="#{individuController.create}" value="#{bundle.CreateIndividuSaveLink}" />
                  |
+                <span class="glyphicon glyphicon-folder-open"></span>
                 <h:commandLink action="#{individuController.prepareList}" value="#{bundle.CreateIndividuShowAllLink}" immediate="true"/>
 <!--                |
                

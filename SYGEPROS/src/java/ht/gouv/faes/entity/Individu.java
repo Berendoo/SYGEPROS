@@ -24,6 +24,7 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
@@ -71,20 +72,21 @@ public class Individu implements Serializable {
     private String prenom;
     @Basic(optional = false)
     @NotNull
+    @Past
     @Column(name = "DATENAISSANCE")
     @Temporal(TemporalType.DATE)
     private Date datenaissance;
     @Basic(optional = false)
     @NotNull
-    @Size(min = 1, max = 17)
+    @Size(min = 17, max = 17)
     @Column(name = "CIN")
     private String cin;
     @Basic(optional = false)
     @NotNull
-    @Size(min = 1, max = 15)
+    @Size(min = 8, max = 11)
     @Column(name = "TELEPHONE")
     private String telephone;
-    @Size(max = 15)
+    @Size(min = 8, max = 11)
     @Column(name = "TELEPHONE2")
     private String telephone2;
     @Basic(optional = false)
@@ -106,6 +108,7 @@ public class Individu implements Serializable {
     private String adresse;
     @Column(name = "DATEENREGISTREMENT")
     @Temporal(TemporalType.DATE)
+    @Past
     private Date dateenregistrement;
     @Size(max = 15)
     @Column(name = "NIVEAU")
@@ -300,7 +303,8 @@ public class Individu implements Serializable {
 
     @Override
     public String toString() {
-     return "ht.gouv.faes.entity.Individu[ idindividu=" + idindividu + " ]";
+     //return "ht.gouv.faes.entity.Individu[ idindividu=" + idindividu + " ]";
+     return nom+" "+prenom+" "+cin;
     }
     
 }

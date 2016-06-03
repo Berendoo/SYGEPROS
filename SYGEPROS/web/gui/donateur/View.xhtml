@@ -18,7 +18,7 @@
               <h:panelGroup id="messagePanel" layout="block">
                 <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
             </h:panelGroup>
-            <h:form>
+          <h:form style="margin-left:25px">
                 <h:panelGrid columns="2"  border="1">
                     <h:outputText value="#{bundle.ViewDonateurLabel_iddonateur}"/>
                     <h:outputText value="#{donateurController.selected.iddonateur}" title="#{bundle.ViewDonateurTitle_iddonateur}"/>
@@ -46,12 +46,16 @@
                     </h:outputText>
                 </h:panelGrid>
                 <br />
+                <span class="glyphicon glyphicon-floppy-remove"></span>
                 <h:commandLink action="#{donateurController.destroyAndView}" value="#{bundle.ViewDonateurDestroyLink}"/>
                 |
+                <span class="glyphicon glyphicon-pencil"></span>
                 <h:link outcome="Edit" value="#{bundle.ViewDonateurEditLink}"/>
                 |
+                <span class="glyphicon glyphicon-plus"></span>
                 <h:commandLink action="#{donateurController.prepareCreate}" value="#{bundle.ViewDonateurCreateLink}" />
                 |
+                <span class="glyphicon glyphicon-folder-open"></span>
                 <h:commandLink action="#{donateurController.prepareList}" value="#{bundle.ViewDonateurShowAllLink}"/>
 <!--                <br />
                 <br />

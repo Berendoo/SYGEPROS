@@ -10,12 +10,12 @@
         <ui:composition template="./../../template/templatepage.xhtml">
 
             <ui:define name="title">
-                <h:outputText value="#{bundle.ListIndividuTitle}"></h:outputText>
-                style="box-shadow: 0 0 10px 1px black;"
+                <h2><h:outputText value="#{bundle.ListIndividuTitle}"></h:outputText></h2>
+                <hr size="5px" style="box-shadow: 0 0 10px 1px black;"/>
             </ui:define>
 
             <ui:define name="content">
-                <h:form styleClass="jsfcrud_list_form">
+                   <h:form styleClass="jsfcrud_list_form" style="margin-left:25px">
                 <h:panelGroup id="messagePanel" layout="block">
                     <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
                 </h:panelGroup>
@@ -141,6 +141,7 @@
                     </h:dataTable>
                 </h:panelGroup>
                 <br />
+               <span class="glyphicon glyphicon-plus"></span>
                 <h:commandLink action="#{individuController.prepareCreate}" value="#{bundle.ListIndividuCreateLink}"/>
 <!--                |
                 <h:link outcome="/index" value="#{bundle.ListIndividuIndexLink}"/>-->

@@ -18,13 +18,14 @@
                 <h:panelGroup id="messagePanel" layout="block">
                 <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
             </h:panelGroup>
-            <h:form>
+         <h:form style="margin-left:25px">
                 <h:panelGrid columns="2">
                     <h:outputLabel value="#{bundle.CreateDossierbeneficiaireLabel_iddossierbeneficiaire}" for="iddossierbeneficiaire" />
                     <h:inputText id="iddossierbeneficiaire" value="#{dossierbeneficiaireController.selected.iddossierbeneficiaire}" title="#{bundle.CreateDossierbeneficiaireTitle_iddossierbeneficiaire}" disabled="true"/>
                     <h:outputLabel value="#{bundle.CreateDossierbeneficiaireLabel_idindividu}" for="idindividu" />
-                    <h:inputText id="idindividu" value="#{dossierbeneficiaireController.selected.idindividu}" title="#{bundle.CreateDossierbeneficiaireTitle_idindividu}" required="true" requiredMessage="#{bundle.CreateDossierbeneficiaireRequiredMessage_idindividu}"/>
-                    
+                    <h:selectOneMenu id="idindividu" value="#{dossierbeneficiaireController.selected.idindividu}" title="#{bundle.CreateDossierbeneficiaireTitle_idindividu}" required="true" requiredMessage="#{bundle.CreateDossierbeneficiaireRequiredMessage_idindividu}">
+                        <f:selectItems value="#{individuController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
                     <h:outputLabel value="#{bundle.CreateDossierbeneficiaireLabel_description}" for="description" />
                     <h:inputText id="description" value="#{dossierbeneficiaireController.selected.description}" title="#{bundle.CreateDossierbeneficiaireTitle_description}" required="true" requiredMessage="#{bundle.CreateDossierbeneficiaireRequiredMessage_description}"/>
                     <h:outputLabel value="#{bundle.CreateDossierbeneficiaireLabel_datecreation}" for="datecreation" />
@@ -35,8 +36,10 @@
                     <h:inputText id="createdBy" value="#{dossierbeneficiaireController.selected.createdBy}" title="#{bundle.CreateDossierbeneficiaireTitle_createdBy}" />
                 </h:panelGrid>
                 <br />
+                <span class="glyphicon glyphicon-floppy-saved"></span>
                 <h:commandLink action="#{dossierbeneficiaireController.create}" value="#{bundle.CreateDossierbeneficiaireSaveLink}" />
                 |
+              <span class="glyphicon glyphicon-folder-open"></span>
                 <h:commandLink action="#{dossierbeneficiaireController.prepareList}" value="#{bundle.CreateDossierbeneficiaireShowAllLink}" immediate="true"/>
 <!--                <br />
                 <br />

@@ -67,12 +67,12 @@ public class Personnereference implements Serializable {
     private String adresseprf;
     @Basic(optional = false)
     @NotNull
-    @Size(min = 1, max = 17)
+    @Size(min = 10, max = 17)
     @Column(name = "CINPRF")
     private String cinprf;
     @Basic(optional = false)
     @NotNull
-    @Size(min = 1, max = 15)
+    @Size(min = 8, max = 11)
     @Column(name = "TELEPHONEPRF")
     private String telephoneprf;
     @Basic(optional = false)

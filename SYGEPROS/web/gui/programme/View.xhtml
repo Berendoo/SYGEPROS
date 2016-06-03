@@ -18,7 +18,7 @@
                 <h:panelGroup id="messagePanel" layout="block">
                 <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
             </h:panelGroup>
-            <h:form>
+          <h:form style="margin-left:25px">
                 <h:panelGrid columns="2"  border="1">
                     <h:outputText value="#{bundle.ViewProgrammeLabel_idprogramme}"/>
                     <h:outputText value="#{programmeController.selected.idprogramme}" title="#{bundle.ViewProgrammeTitle_idprogramme}"/>
@@ -36,12 +36,16 @@
                     <h:outputText value="#{programmeController.selected.idinstitution.nominstitution}" title="#{bundle.ViewProgrammeTitle_idinstitution}"/>
                 </h:panelGrid>
                 <br />
+                <span class="glyphicon glyphicon-floppy-remove"></span>
                 <h:commandLink action="#{programmeController.destroyAndView}" value="#{bundle.ViewProgrammeDestroyLink}"/>
                |
+               <span class="glyphicon glyphicon-pencil"></span>
                 <h:link outcome="Edit" value="#{bundle.ViewProgrammeEditLink}"/>
                |
+               <span class="glyphicon glyphicon-plus"></span>
                 <h:commandLink action="#{programmeController.prepareCreate}" value="#{bundle.ViewProgrammeCreateLink}" />
                |
+               <span class="glyphicon glyphicon-folder-open"></span>
                 <h:commandLink action="#{programmeController.prepareList}" value="#{bundle.ViewProgrammeShowAllLink}"/>
 <!--                <br />
                 <br />

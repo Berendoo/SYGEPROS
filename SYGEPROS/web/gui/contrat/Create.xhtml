@@ -18,7 +18,7 @@
                 <h:panelGroup id="messagePanel" layout="block">
                 <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
             </h:panelGroup>
-            <h:form>
+            <h:form style="margin-left:25px">
                 <h:panelGrid columns="2">
                     <h:outputLabel value="#{bundle.CreateContratLabel_idcontrat}" for="idcontrat" />
                     <h:inputText id="idcontrat" value="#{contratController.selected.idcontrat}" title="#{bundle.CreateContratTitle_idcontrat}" disabled="true" />
@@ -42,13 +42,14 @@
                     </h:selectOneMenu>
                 </h:panelGrid>
                 <br />
+                <span class="glyphicon glyphicon-floppy-saved"></span>
                 <h:commandLink action="#{contratController.create}" value="#{bundle.CreateContratSaveLink}" />
-                <br />
-                <br />
+              |
+            <span class="glyphicon glyphicon-folder-open"></span>
                 <h:commandLink action="#{contratController.prepareList}" value="#{bundle.CreateContratShowAllLink}" immediate="true"/>
+<!--                <br />
                 <br />
-                <br />
-                <h:link outcome="/index" value="#{bundle.CreateContratIndexLink}"/>
+                <h:link outcome="/index" value="#{bundle.CreateContratIndexLink}"/>-->
             </h:form>
             </ui:define>
 

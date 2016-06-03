@@ -18,7 +18,7 @@
                 <h:panelGroup id="messagePanel" layout="block">
                 <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
             </h:panelGroup>
-            <h:form>
+          <h:form style="margin-left:25px">
                 <h:panelGrid columns="2">
                     <h:outputLabel value="#{bundle.CreatePersonnereferenceLabel_idprf}" for="idprf" />
                     <h:inputText id="idprf" value="#{personnereferenceController.selected.idprf}" title="#{bundle.CreatePersonnereferenceTitle_idprf}" disabled="true"/>
@@ -52,8 +52,10 @@
                     </h:selectOneMenu>
                 </h:panelGrid>
                 <br />
+                <span class="glyphicon glyphicon-floppy-saved"></span>
                 <h:commandLink action="#{personnereferenceController.create}" value="#{bundle.CreatePersonnereferenceSaveLink}" />
                 |
+             <span class="glyphicon glyphicon-folder-open"></span>
                 <h:commandLink action="#{personnereferenceController.prepareList}" value="#{bundle.CreatePersonnereferenceShowAllLink}" immediate="true"/>
 <!--                <br />
                 <br />
